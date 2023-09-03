@@ -55,7 +55,7 @@ img.avt{
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
+    position: fixed;
    
 }
 .user {

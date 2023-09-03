@@ -1,0 +1,238 @@
+<<<<<<< Updated upstream:Client Dashboard/surveyfrom.html
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/user dash.css">
+    <link rel="stylesheet" type="text/css" href="css/mapp.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <title>UDM Alumni Portal - Mapping Alumni Trajectories</title>
+</head>
+<body>
+    <div class="container">
+      <div class="topbar">
+        <p>Welcome Alumni's</p>
+          <img src="img/udm logo.png" alt="Avatar" class="avatar">          
+        </div>
+        <div class="bg">
+          <img src="img/UDM_Lights.jpg" alt="avt" class="avt">
+        </div>
+      <div class="sidebar">
+        <h1>Dashboard</h1>
+          <ul>
+          <li>  
+            <a href="user dash.html">
+            <i class="fas fa-bullhorn"></i>
+            <div>Announcement</div>
+            </a>
+          </li>           
+          <li>
+            <a href="myprofile.html">
+              <i class="fas fa-id-card"></i>
+              <div>My Profile</div>
+            </a>
+          </li>
+          <li>
+            <a href="joboffering.html">
+              <i class="fas fa-user-tie"></i>
+              <div>Job Offerings</div>
+            </a>
+          </li>
+          <li>
+            <a href="mapping.html">
+              <i class="fas fa-map-marked-alt"></i>
+              <div>Mapping Alumni Trajectories</div>
+            </a>
+          </li>
+          <!--
+          <li>
+            <a href="AddData.html">
+              <i class="fas fa-users"></i>
+              <div>Add Data</div>
+            </a>
+          </li>
+  -->
+        </ul>
+          <img src="img/udm.png" alt="Avtr" class="avtr">
+        </div>
+        <div class="contain1">
+	
+    <div class="titles">
+	<h1>Mapping Alumni Trajectories </h1>
+	<h2>Aligning Professional Paths with Degree Attainments</h2>
+    </div>
+
+	<!-- Create Form -->
+	<form id="form">
+
+		<!-- Details -->
+		<div class="form-control">
+			<label for="name" id="label-name">
+				Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="name"
+				placeholder="Enter your name" />
+		</div>
+
+		<div class="form-control">
+			<label for="email" id="label-email">
+				Email
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="email"
+				id="email"
+				placeholder="Enter your email" />
+		</div>
+
+		<div class="form-control">
+			<label for="age" id="label-age">
+				Age
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="age"
+				placeholder="Enter your age" />
+		</div>
+
+		<div class="form-control">
+            <label>
+                Sex
+            </label>
+ 
+            <!-- Input Type Radio Button -->
+            <label for="recommed-1">
+                <input type="radio"
+                       id="recommed-1"
+                       name="recommed">Male</input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio"
+                       id="recommed-2"
+                       name="recommed">Female</input>
+            </label>
+
+			<label for="recommed-3">
+                <input type="radio"
+                       id="recommed-3"
+                       name="recommed">Others</input>
+            </label>
+        </div>
+		
+		<div class="form-control">
+			<label for="question" id="label-question">
+				1. What is your current position and how did [the school] prepare you for your career?
+
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="question"
+				placeholder="Enter your answer" />
+		</div>
+
+		<div class="form-control">
+			<label for="question" id="label-question">
+				2. What skills or knowledge did you learn throughout the program that you found most useful in your career?
+
+
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="question"
+				placeholder="Enter your answer" />
+		</div>
+
+		<div class="form-control">
+			<label for="question" id="label-question">
+				3. How did your experience at [the school] help you find your first position after graduation?
+
+
+
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="question"
+				placeholder="Enter your answer" />
+		</div>
+
+		<div class="form-control">
+			<label for="question" id="label-question">
+				4. How did your time at [the school] help to prepare/impact you for your current career, activities, friends, etc.?
+
+
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="question"
+				placeholder="Enter your answer" />
+		</div>
+
+		<div class="form-control">
+			<label for="question" id="label-question">
+				5. Did the curriculum prepare you for your first/next/current job?
+
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="question"
+				placeholder="Enter your answer" />
+		</div>
+
+		<div class="form-control">
+			<label for="question" id="label-question">
+				6. What do employers look for in new graduates from [the school]?
+
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="question"
+				placeholder="Enter your answer" />
+		</div>
+
+		<div class="form-control">
+			<label for="question" id="label-question">
+				7. While at [the school], did you have any idea that your current job existed?
+
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="question"
+				placeholder="Enter your answer" />
+		</div>
+
+		<div class="form-control">
+			<label for="question" id="label-question">
+				8. Based on what you know now, would you pick the same career path?
+
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="question"
+				placeholder="Enter your answer" />
+		</div>
+        
+
+		<!-- Multi-line Text Input Control -->
+		<button type="submit" value="submit">
+			Submit
+		</button>
+	</form>
+</body>
+</html>
+>>>>>>> Stashed changes:Client Dashboard/mapping.html
