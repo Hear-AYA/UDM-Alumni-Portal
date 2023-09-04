@@ -7,9 +7,9 @@
 			max-width: 550px;
     		margin: 150px auto;
     		padding: 35px 17px;
-    		box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    		box-shadow: 2px 5px 10px rgba(230, 212, 142, 0.5);
             position: relative;
-            left: -200px;
+            left: -95px;
 		}
 
 		/* Styling form-control Class */
@@ -56,13 +56,14 @@
 			width: 50%;
 			margin-top: 40px;
 			margin-bottom: 20px;
+			position: absolute;
+			right: 95px;
 		}
 
         .contain1 {
-            max-width: 75%;
-            max-height: 95%;
+            max-width: 65%;
+            max-height: 250%;
             margin: -94px auto;
-            background-color: #91cf8b;
             display: flex;
             justify-content: space-between;
             position: relative;

@@ -14,7 +14,7 @@ table {
     font-size: 16px; 
     font-style: normal;
     font-weight: bold;
-    background: #91cf8b;  
+    background: #fff;  
     border-collapse: collapse; 
     border: 4px;
     position: relative;
@@ -44,7 +44,7 @@ input[type=submit], input[type=reset] {
     max-height: 95%;
     margin: -94px auto;
     padding: 20px;
-    background-color: #91cf8b;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     position: relative;
