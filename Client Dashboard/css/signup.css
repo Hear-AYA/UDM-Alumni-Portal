@@ -10,18 +10,23 @@ body{
   display: flex;
   align-items: center;
   justify-content: left;
-  background-image: url(img/univ.jpg);
-  background-size: cover;
 }
 
-img{
+img.avtr{
     position: relative;
     top: -258px;
     left: 110px;
     height: 72px;
     width: 79px;
-
 }
+
+img.avt{
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+}
+
 .wrapper{
   position: relative;
   max-width: 430px;
