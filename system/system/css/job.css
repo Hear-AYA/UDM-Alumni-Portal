@@ -1,0 +1,86 @@
+body {
+    background-color: azure;
+}
+
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    top: 125px;
+    left: 100px;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+nav {
+    background-color: #1A5D1A;
+    position: relative;
+    bottom: 15px;
+    height: 88px;
+    right: 11px;
+    width: 1283px;
+}
+
+label.LOGO {
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+    display: inline-block;
+    font-weight: bold;
+    
+}
+
+.logo label.LOGO {
+    position: absolute;
+    left: 92px;
+    top: 16px;
+    z-index: 1;
+    text-align: left;
+}
+
+.logo img {
+    height: 70px;
+    width: 70px;
+    margin: 11px;
+    position: relative;
+    left: 6px;
+}
