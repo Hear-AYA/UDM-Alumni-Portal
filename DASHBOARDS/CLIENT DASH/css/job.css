@@ -1,86 +1,309 @@
-body {
-    background-color: azure;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'University', sans-serif;
 }
 
-
-.slider-wrapper {
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
-    top: 125px;
-    left: 100px;
-}
-
-.slider {
-    display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
-.slider::-webkit-scrollbar {
-    width: 0 !important;
-}
-
-.slider img {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-}
-
-.slider-nav {
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
+.topbar {
+    position: fixed;
+    background: #135c10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 10fr 0.4fr 1fr;
+    align-items: center;
     z-index: 1;
+    top: 0px;
 }
 
-.slider-nav a {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.75;
-	transition: opacity ease 250ms;
-}
-
-.slider-nav a:hover {
-	opacity: 1;
-}
-
-nav {
-    background-color: #1A5D1A;
+.topbar p {
+    color: #fff;
     position: relative;
-    bottom: 15px;
-    height: 88px;
-    right: 11px;
-    width: 1283px;
+    left: 162px;
+    font-size: large;
+    font-family: 'University', sans-serif; 
 }
 
-label.LOGO {
-    color: white;
-    font-size: 30px;
-    padding: 15px;
-    display: inline-block;
-    font-weight: bold;
+.logo {
+    color: black;
+}
+
+img.avatar {
+    width: 60px;
+    height: 55px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 95px;
+bottom: 2px;
+
+}
+
+img.avtr {
     
+  width: 250px;
+  background-position: left;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 6px;
+  bottom: 0px
 }
 
-.logo label.LOGO {
-    position: absolute;
-    left: 92px;
-    top: 16px;
-    z-index: 1;
-    text-align: left;
+img.avt{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+   
 }
-
-.logo img {
-    height: 70px;
-    width: 70px;
-    margin: 11px;
+.user {
     position: relative;
-    left: 6px;
+    width: 50px;
+    height: 50px;
+}
+
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* sidebar will start here*/
+.sidebar {
+    position: fixed;
+    top: 60px;
+    width: 260px;
+    height: calc(100% - 60px);
+    background: #91cf8b;
+    overflow-x: hidden ;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    width: 100%;
+    list-style: none;
+}
+
+.sidebar ul li:hover {
+    background: #135c10;
+}
+
+
+.sidebar h1{
+    position: relative;
+    left: 35px;
+    color: #050505;
+    top: 15px
+}
+
+.sidebar ul li:hover a{
+    color: #fff;
+    ;
+}
+
+.sidebar ul li a {
+    width: 100%;
+    text-decoration: none;
+    color: #050505;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    min-width: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Announcement css starts  here */
+
+.contain, h1, h2, p {
+    margin: 0;
+    padding: 8px;
+    position: relative;
+    right: -2px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.contain {
+    max-width: 79%;
+    max-height: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #91cf8b;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    right: -130px;
+    bottom: -160px;
+}
+
+.events .announcement .contact {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contain:hover {
+    transform: scale(1.02);
+}
+
+.jobs-list-container {
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: "Rubik", sans-serif;
+  }
+  
+  .jobs-list-container h2 {
+    font-size: 30px;
+    border-left: 4px solid #023047;
+    padding-left: 20px;
+  }
+  
+  .jobs-list-container .jobs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .jobs-list-container .jobs img {
+    width: 60px;
+  }
+  
+  .jobs-list-container .job {
+    box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+    padding: 24px;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    right: -41%;
+    transition: all 400ms ease;
+    background: white;
+  }
+  
+  .jobs-list-container .job:hover {
+    transform: scale(1.03);
+  }
+  
+  .jobs-list-container .open-positions {
+    position: absolute;
+    top: 40px;
+    right: 24px;
+    color:  red;
+  }
+  
+  .jobs-list-container .job-title {
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0;
+    color:  #135c10;
+  }
+  
+  .jobs-list-container .details {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.8;
+    flex: 1;
+  }
+  
+  .jobs-list-container .details-btn {
+    text-decoration: none;
+    border: 1px solid #135c10;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    transition: all 400ms ease;
+  }
+  
+  .jobs-list-container .details-btn:hover {
+    background: #135c10;
+    color: #fff;
+  }
+  
+  .jobs-list-container .job-search {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: white;
+    position: relative;
+    right: -14%;
+  }
+  
+  @media (max-width: 940px) {
+    .jobs-list-container .jobs {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .jobs-list-container .jobs {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  
+
+@media (max-width:1115px) {
+    .sidebar {
+        width: 60px;
+    }
+    .main {
+        left: 60px;
+        width: calc(100% - 60px);
+    }
+}
+
+@media (max-width:880px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:500px) {
+    .topbar {
+        grid-template-columns: 1fr 5fr 0.4fr 1fr;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .logo h2 {
+        font-size: 20px;
+    }
+    .search {
+        width: 80px;        
+    }
+    .search input {
+        padding: 0 20px;
+    }
+    .fa-bell {
+        margin-right: 5px;
+    }
+    .user {
+        width: 40px;
+        height: 40px;
+    }
 }
