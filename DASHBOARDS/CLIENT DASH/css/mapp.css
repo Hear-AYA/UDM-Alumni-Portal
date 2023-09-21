@@ -9,7 +9,7 @@
     		padding: 35px 17px;
     		box-shadow: 2px 5px 10px rgba(230, 212, 142, 0.5);
             position: relative;
-            left: -95px;
+            right: 26%;
 		}
 
 		/* Styling form-control Class */
@@ -68,15 +68,20 @@
             justify-content: space-between;
             position: relative;
             right: -130px;
-            bottom: -160px;
+            bottom: -88px;
         }
 
-        .titles {
+        .titles h1 {
             position: relative;
             left: 300px;
             top: 15px;
             text-align: center;
+			background-color: white;
+			background-size: 55px;
+			left: 50%;
+			top: 4%;
         }
+
 body {
 	background-image: url("img/UDM_Lights.jpg");
 	background-repeat: no-repeat;
