@@ -57,6 +57,13 @@ const jobs = [
   const jobsHeading = document.querySelector(".jobs-list-container h2");
   const jobsContainer = document.querySelector(".jobs-list-container .jobs");
   const jobSearch = document.querySelector(".jobs-list-container .job-search");
+  const postJobButton = document.getElementById('postJobButton');
+
+  postJobButton.addEventListener('click', () => {
+    // Display the post job form
+    const postJobForm = document.getElementById('postJobForm');
+    postJobForm.style.display = 'block';
+  });
   
   let searchTerm = "";
   
@@ -65,7 +72,21 @@ const jobs = [
   } else {
     jobsHeading.innerHTML = `${jobs.length} Jobs`;
   }
-  
+
+  // Function to handle the delete action
+function handleDelete(jobCard, jobToDelete) {
+  // Remove the job card from the DOM
+  jobCard.remove();
+
+  // Find the index of the job in the jobs array based on the jobToDelete object
+  const indexToDelete = jobs.findIndex((job) => job === jobToDelete);
+
+  if (indexToDelete !== -1) {
+    // Remove the job from the jobs array
+    jobs.splice(indexToDelete, 1);
+  }
+}
+
   const createJobListingCards = () => {
     jobsContainer.innerHTML = "";
   
@@ -89,7 +110,18 @@ const jobs = [
         detailsBtn.href = job.link;
         detailsBtn.innerHTML = "More Details";
         detailsBtn.classList.add("details-btn");
-  
+
+        let deleteIcon = document.createElement("img");
+        deleteIcon.src = "img/delete.svg"; // Replace with the actual path to your delete SVG icon
+        deleteIcon.alt = "Delete";
+        deleteIcon.classList.add("delete-icon");
+
+      // Add a click event listener to the delete icon
+        deleteIcon.addEventListener("click", () => {
+        // Handle the delete action here
+        handleDelete(jobCard, job); // Pass the job card element and job object to the handleDelete function
+        });
+
         let openPositions = document.createElement("span");
         openPositions.classList.add("open-positions");
   
@@ -103,6 +135,7 @@ const jobs = [
         jobCard.appendChild(title);
         jobCard.appendChild(details);
         jobCard.appendChild(detailsBtn);
+        jobCard.appendChild(deleteIcon); // Add the delete icon
         jobCard.appendChild(openPositions);
   
         jobsContainer.appendChild(jobCard);
@@ -117,4 +150,3 @@ const jobs = [
   
     createJobListingCards();
   });
-  
