@@ -57,6 +57,13 @@ const jobs = [
   const jobsHeading = document.querySelector(".jobs-list-container h2");
   const jobsContainer = document.querySelector(".jobs-list-container .jobs");
   const jobSearch = document.querySelector(".jobs-list-container .job-search");
+  const postJobButton = document.getElementById('postJobButton');
+
+  postJobButton.addEventListener('click', () => {
+    // Display the post job form
+    const postJobForm = document.getElementById('postJobForm');
+    postJobForm.style.display = 'block';
+  });
   
   let searchTerm = "";
   
@@ -104,6 +111,29 @@ function handleDelete(jobCard, jobToDelete) {
         detailsBtn.innerHTML = "More Details";
         detailsBtn.classList.add("details-btn");
 
+        let deleteIcon = document.createElement("img");
+        deleteIcon.src = "img/delete.svg"; // Replace with the actual path to your delete SVG icon
+        deleteIcon.alt = "Delete";
+        deleteIcon.classList.add("delete-icon");
+
+      // Add a click event listener to the delete icon
+        deleteIcon.addEventListener("click", () => {
+        // Handle the delete action here
+        handleDelete(jobCard, job); // Pass the job card element and job object to the handleDelete function
+        });
+
+        let editIcon = document.createElement("img");
+        editIcon.src = "img/edit.svg"; // Replace with the actual path to your edit SVG icon
+        editIcon.alt = "Edit";
+        editIcon.classList.add("edit-icon");
+  
+        // Add a click event listener to the edit icon
+        editIcon.addEventListener("click", () => {
+          // Handle the edit action here
+          handleEdit(job);
+        });
+
+
         let openPositions = document.createElement("span");
         openPositions.classList.add("open-positions");
   
@@ -117,6 +147,8 @@ function handleDelete(jobCard, jobToDelete) {
         jobCard.appendChild(title);
         jobCard.appendChild(details);
         jobCard.appendChild(detailsBtn);
+        jobCard.appendChild(deleteIcon); // Add the delete icon
+        jobCard.appendChild(editIcon); // Add the edit icon
         jobCard.appendChild(openPositions);
   
         jobsContainer.appendChild(jobCard);

@@ -4,8 +4,14 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/admin dash.css">
+    <link rel="stylesheet" href="css/postjob.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>UDM Almuni Portal</title>
 </head>
 <body>
@@ -52,45 +58,28 @@
             </a>
           </li>
   -->
+  
         </ul>
           <img src="img/udm.png" alt="Avtr" class="avtr">
         </div>
-        <div class="contain">
-          <div class="events">
-              <h2>UDM Band Concert 2023!</h2>
-              <p>Come and join us!</p>
-              <p><strong>Date:</strong> October 22, 2023</p>
-              <p><strong>Time:</strong> 5:00 PM - 9:00 PM</p>
-              <p><strong>Location:</strong> Mehan Garden</p>
-              <p><strong>Special Guest:</strong> Parokya ni Edgar, Janine Berdin & I Belong To The Zoo</p>
-          </div>
-      
-          <div class="contact">
-              <h2>Contact Information</h2>
-              <p>If you have any questions and ticket reservation, please contact:</p>
-              <p><strong>Name:</strong> Jhay Khul</p>
-              <p><strong>Email:</strong> jhay.khul@gmail.com</p>
-              <p><strong>Cellphone Number:</strong> 0929384567</p>
-          </div>
-      
-          <div class="announcement">
-              <h2>Save the Date!</h2>
-              <p>Join us for our annual alumni reunion on:</p>
-              <p><strong>Date:</strong> October 15, 2023</p>
-              <p><strong>Time:</strong> 2:00 PM - 6:00 PM</p>
-              <p><strong>Location:</strong> Alumni Hall</p>
-              <p>RSVP by October 1st.</p>
-          </div>
-      
-          <div class="contact">
-              <h2>Contact Information</h2>
-              <p>If you have any questions or need more information, please contact:</p>
-              <p><strong>Name:</strong> John Doe</p>
-              <p><strong>Email:</strong> john.doe@example.com</p>
-              <p><strong>Phone:</strong> (123) 456-7890</p>
-          </div>
-
-      </div>
-    </div>
-    </body>
+        <div class="jobs-list-container">
+          <button id="postJobButton" class="job-button">Post a Job</button>
+          <h2>6 Jobs</h2>
+          <input class="job-search" type="text" placeholder="Search here..." />
+          <div class="jobs"></div>
+          
+          <form id="postJobForm" style="display: none;">
+            <label for="jobTitle">Job Title</label>
+            <input type="text" id="jobTitle" name="jobTitle">
+          
+            <label for="jobDescription">Job Description</label>
+            <textarea id="jobDescription" name="jobDescription"></textarea>
+          
+            <label for="jobQualifications">Job Qualifications</label>
+            <textarea id="jobQualifications" name="jobQualifications"></textarea>
+          
+            <button type="submit">Submit</button>
+          </form>          
+  <script src="js/postjob.js"></script>
+</body>
 </html>
