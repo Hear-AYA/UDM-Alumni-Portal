@@ -1,278 +1,336 @@
 const jobs = [
-    {
-      title: "Software Engineer",
-      image: "img/software-engineer.svg",
-      details:
-        "Responsible for designing, developing and maintaining software systems and applications.",
-      openPositions: "2",
-      link: "#",
-    },
-  
-    {
-      title: "Data Scientist",
-      image: "img/data-scientist.svg",
-      details:
-        "Responsible for collecting, analyzing and interpreting large data sets to help organizations make better decisions.",
-      openPositions: "3",
-      link: "#",
-    },
-  
-    {
-      title: "Project Manager",
-      image: "img/project-manager.svg",
-      details:
-        "Responsible for planning, executing and closing projects on time and within budget.",
-      openPositions: "1",
-      link: "#",
-    },
-  
-    {
-      title: "Product Manager",
-      image: "img/product-manager.svg",
-      details:
-        "Responsible for managing the entire product life cycle, from ideation to launch and post-launch maintenance.",
-      openPositions: "1",
-      link: "#",
-    },
-  
-    {
-      title: "Sales Representative",
-      image: "img/sales-representative.svg",
-      details:
-        "Responsible for reaching out to potential customers and closing sales deals.",
-      openPositions: "4",
-      link: "#",
-    },
-  
-    {
-      title: "Marketing Manager",
-      image: "img/marketing-manager.svg",
-      details:
-        "Responsible for creating and executing marketing strategies to promote a company or product.",
-      openPositions: "1",
-      link: "#",
-    },
-  ];
-  
-  const jobsHeading = document.querySelector(".jobs-list-container h2");
+  {
+    title: "Software Engineer",
+    image: "img/software-engineer.svg",
+    details:
+      "Responsible for designing, developing and maintaining software systems and applications.",
+    openPositions: "2",
+    link: "#",
+  },
+
+  {
+    title: "Data Scientist",
+    image: "img/data-scientist.svg",
+    details:
+      "Responsible for collecting, analyzing and interpreting large data sets to help organizations make better decisions.",
+    openPositions: "3",
+    link: "#",
+  },
+
+  {
+    title: "Project Manager",
+    image: "img/project-manager.svg",
+    details:
+      "Responsible for planning, executing and closing projects on time and within budget.",
+    openPositions: "1",
+    link: "#",
+  },
+
+  {
+    title: "Product Manager",
+    image: "img/product-manager.svg",
+    details:
+      "Responsible for managing the entire product life cycle, from ideation to launch and post-launch maintenance.",
+    openPositions: "1",
+    link: "#",
+  },
+
+  {
+    title: "Sales Representative",
+    image: "img/sales-representative.svg",
+    details:
+      "Responsible for reaching out to potential customers and closing sales deals.",
+    openPositions: "4",
+    link: "#",
+  },
+
+  {
+    title: "Marketing Manager",
+    image: "img/marketing-manager.svg",
+    details:
+      "Responsible for creating and executing marketing strategies to promote a company or product.",
+    openPositions: "1",
+    link: "#",
+  },
+];
+
+
+const jobsHeading = document.querySelector(".jobs-list-container h2");
 const jobsContainer = document.querySelector(".jobs-list-container .jobs");
-  const jobSearch = document.querySelector(".jobs-list-container .job-search");
-  const postJobButton = document.getElementById('postJobButton');
-  const postJobForm = document.getElementById('job-form'); // Changed the ID to match the form
-  
- // Add a click event listener to the "Post a Job" button
-postJobButton.addEventListener('click', () => {
-  // Display the post job form
-  postJobForm.style.display = 'block';
-});
-// Add a submit event listener to the job posting form
-postJobForm.addEventListener('submit', (e) => {
+const jobSearch = document.querySelector(".jobs-list-container .job-search");
+
+let searchTerm = "";
+
+if (jobs.length == 1) {
+jobsHeading.innerHTML = `${jobs.length} Job`;
+} else {
+jobsHeading.innerHTML = `${jobs.length} Jobs`;
+}
+
+function createFormInput(labelText, inputType, inputValue) {
+// Create a label element
+const label = document.createElement("label");
+label.textContent = labelText;
+
+// Create an input element
+const input = document.createElement("input");
+input.type = inputType;
+input.value = inputValue;
+
+// Append the label and input elements to a container (e.g., a div)
+const container = document.createElement("div");
+container.appendChild(label);
+container.appendChild(input);
+
+return container;
+}
+
+function createEditForm(job) {
+// Create a form element for editing job details
+const editForm = document.createElement("form");
+editForm.classList.add("edit-form");
+
+// Create form fields for the specified requirements
+const positionTitleInput = createFormInput(
+  "Position Title",
+  "text",
+  job.title
+);
+
+const requirementsInput = createFormInput(
+  "Requirements",
+  "text",
+  job.requirements || ""
+);
+
+const salaryInput = createFormInput(
+  "Salary/Job/Pay Grade",
+  "text",
+  job.salary || ""
+);
+
+const monthlySalaryInput = createFormInput(
+  "Monthly Salary",
+  "text",
+  job.monthlySalary || ""
+);
+
+// Qualifications section
+const qualificationsFieldset = document.createElement("fieldset");
+qualificationsFieldset.innerHTML = "<legend>Qualifications</legend>";
+
+const educationInput = createFormInput(
+  "Education",
+  "text",
+  job.qualifications?.education || ""
+);
+
+const trainingInput = createFormInput(
+  "Training",
+  "text",
+  job.qualifications?.training || ""
+);
+
+const experienceInput = createFormInput(
+  "Experience",
+  "text",
+  job.qualifications?.experience || ""
+);
+
+const eligibilityInput = createFormInput(
+  "Eligibility",
+  "text",
+  job.qualifications?.eligibility || ""
+);
+
+const researchOutputInput = createFormInput(
+  "Research Output",
+  "text",
+  job.qualifications?.researchOutput || ""
+);
+
+const communityExtensionServiceInput = createFormInput(
+  "Community Extension Service",
+  "text",
+  job.qualifications?.communityExtensionService || ""
+);
+
+const competencyInput = createFormInput(
+  "Competency (if applicable)",
+  "text",
+  job.qualifications?.competency || ""
+);
+
+const placeOfAssignmentInput = createFormInput(
+  "Place of Assignment",
+  "text",
+  job.qualifications?.placeOfAssignment || ""
+);
+
+// Append the form fields to the form
+editForm.appendChild(positionTitleInput);
+editForm.appendChild(requirementsInput);
+editForm.appendChild(salaryInput);
+editForm.appendChild(monthlySalaryInput);
+
+qualificationsFieldset.appendChild(educationInput);
+qualificationsFieldset.appendChild(trainingInput);
+qualificationsFieldset.appendChild(experienceInput);
+qualificationsFieldset.appendChild(eligibilityInput);
+qualificationsFieldset.appendChild(researchOutputInput);
+qualificationsFieldset.appendChild(communityExtensionServiceInput);
+qualificationsFieldset.appendChild(competencyInput);
+qualificationsFieldset.appendChild(placeOfAssignmentInput);
+editForm.appendChild(qualificationsFieldset);
+
+// Add a submit button for the form
+const submitButton = document.createElement("button");
+submitButton.textContent = "Save Changes";
+submitButton.addEventListener("click", (e) => {
   e.preventDefault(); // Prevent the form from submitting
 
-  // Here, you can access form fields and their values
-  const jobTitle = document.getElementById('jobTitle').value;
-  const jobDetails = document.getElementById('jobDetails').value;
-
-  // Create a new job object and add it to the jobs array
-  const newJob = {
-    title: jobTitle,
-    details: jobDetails,
-    // Add other properties as needed
+  // Update the job details based on the form inputs
+  job.title = positionTitleInput.querySelector("input").value;
+  job.requirements = requirementsInput.querySelector("input").value;
+  job.salary = salaryInput.querySelector("input").value;
+  job.monthlySalary = monthlySalaryInput.querySelector("input").value;
+  
+  job.qualifications = {
+    education: educationInput.querySelector("input").value,
+    training: trainingInput.querySelector("input").value,
+    experience: experienceInput.querySelector("input").value,
+    eligibility: eligibilityInput.querySelector("input").value,
+    researchOutput: researchOutputInput.querySelector("input").value,
+    communityExtensionService: communityExtensionServiceInput.querySelector("input").value,
+    competency: competencyInput.querySelector("input").value,
+    placeOfAssignment: placeOfAssignmentInput.querySelector("input").value,
   };
 
-  jobs.push(newJob);
-
-  // Hide the form after submission
-  postJobForm.style.display = 'none';
-
-  // Re-render the job listings with the new job
+  // Close the edit form and update the job card
+  editForm.remove();
   createJobListingCards();
 });
 
-  let searchTerm = "";
-  
-  if (jobs.length == 1) {
-    jobsHeading.innerHTML = `${jobs.length} Job`;
-  } else {
-    jobsHeading.innerHTML = `${jobs.length} Jobs`;
-  }
+// Append the submit button to the form
+editForm.appendChild(submitButton);
 
-  // Function to handle the delete action
-function handleDelete(jobCard, jobToDelete) {
-  // Remove the job card from the DOM
-  jobCard.remove();
-
-  // Find the index of the job in the jobs array based on the jobToDelete object
-  const indexToDelete = jobs.findIndex((job) => job === jobToDelete);
-
-  if (indexToDelete !== -1) {
-    // Remove the job from the jobs array
-    jobs.splice(indexToDelete, 1);
-  }
+return editForm;
 }
 
-  const createJobListingCards = () => {
-    jobsContainer.innerHTML = "";
-  
-    jobs.forEach((job) => {
-      if (job.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-        let jobCard = document.createElement("div");
-        jobCard.classList.add("job");
-  
-        let image = document.createElement("img");
-        image.src = job.image;
-  
-        let title = document.createElement("h3");
-        title.innerHTML = job.title;
-        title.classList.add("job-title");
-  
-        let details = document.createElement("div");
-        details.innerHTML = job.details;
-        details.classList.add("details");
-  
-        let detailsBtn = document.createElement("a");
-        detailsBtn.href = job.link;
-        detailsBtn.innerHTML = "More Details";
-        detailsBtn.classList.add("details-btn");
 
-        let deleteIcon = document.createElement("img");
-        deleteIcon.src = "img/delete.svg"; // Replace with the actual path to your delete SVG icon
-        deleteIcon.alt = "Delete";
-        deleteIcon.classList.add("delete-icon");
-
-        // Add a click event listener to the delete icon
-        deleteIcon.addEventListener("click", () => {
-        // Handle the delete action here
-        handleDelete(jobCard, job); // Pass the job card element and job object to the handleDelete function
-        });
-
-        // Function to handle the delete action
-        function handleDelete(jobCard, jobToDelete) {
-        // Remove the job card from the DOM
-        jobCard.remove();
-
-  // Find the index of the job in the jobs array based on the jobToDelete object
-  const indexToDelete = jobs.findIndex((job) => job === jobToDelete);
-
-  if (indexToDelete !== -1) {
-    // Remove the job from the jobs array
-    jobs.splice(indexToDelete, 1);
-  }
-}
-
-// Function to handle the edit action
 function handleEdit(job) {
-  // For simplicity, let's open an alert with the job title as a placeholder.
-  const newJobTitle = prompt("Edit Job Title:", job.title);
+console.log("Edit button clicked"); // Add this line for debugging
+const jobIndex = jobs.findIndex((j) => j.title === job.title);
 
-  if (newJobTitle !== null) {
-    // Update the job title in the jobs array
-    job.title = newJobTitle;
+if (jobIndex !== -1) {
+  // Get the job card element by its index in the jobsContainer
+  const jobCard = jobsContainer.children[jobIndex];
 
-    // Update the job card in the DOM
-    const jobCard = document.querySelector(`.job-title:contains("${job.title}")`);
-    if (jobCard) {
-      jobCard.innerHTML = newJobTitle;
-    }
+  // Create the edit form and pass the job object as a parameter
+  const editForm = createEditForm(job);
+
+  // Replace the job card content with the edit form
+  jobCard.innerHTML = '';
+  jobCard.appendChild(editForm);
+}
+}
+
+function handleDelete(jobCard, jobToDelete) {
+// Remove the job card from the DOM
+jobCard.remove();
+
+// Find the index of the job in the jobs array based on the jobToDelete object
+const indexToDelete = jobs.findIndex((job) => job === jobToDelete);
+
+if (indexToDelete !== -1) {
+  // Remove the job from the jobs array
+  jobs.splice(indexToDelete, 1);
+}
+}
+
+function createJobListingCards() {
+jobsContainer.innerHTML = "";
+
+jobs.forEach((job) => {
+  if (job.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+    let jobCard = document.createElement("div");
+    jobCard.classList.add("job");
+
+    let image = document.createElement("img");
+    image.src = job.image;
+
+    let title = document.createElement("h3");
+    title.innerHTML = job.title;
+    title.classList.add("job-title");
+
+    let details = document.createElement("div");
+    details.innerHTML = job.details;
+    details.classList.add("details");
+
+    let detailsBtn = document.createElement("a");
+    detailsBtn.href = job.link;
+    detailsBtn.textContent = "More Details";
+    detailsBtn.classList.add("details-btn");
+
+    let editIcon = document.createElement("img");
+    editIcon.src = "img/edit.svg"; // Replace with the actual path to your edit SVG icon
+    editIcon.alt = "Edit";
+    editIcon.classList.add("edit-icon");
+
+// Updated code for edit icon click event
+jobsContainer.addEventListener("click", (event) => {
+const editButton = event.target.closest(".edit-icon");
+if (editButton) {
+  event.preventDefault(); // Prevent the click event from propagating
+  console.log("Edit button clicked"); // Add this line for debugging
+  const jobCard = editButton.closest(".job");
+  const jobTitle = jobCard.querySelector(".job-title").textContent;
+  // Find the corresponding job object by title
+  const jobObject = jobs.find((job) => job.title === jobTitle);
+  if (jobObject) {
+    handleEdit(jobObject); // Pass the entire job object to the handleEdit function
   }
 }
-// Add a click event listener to the "Post a Job" button
-postJobButton.addEventListener('click', () => {
-  // Display an alert window with your custom content
-  const alertContent = `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="newjob.css">
-        <title>Admin Post Job</title>
-    </head>
-    <body>
-        <h1>Post a Job</h1>
-        <form id="job-form">
-            <label for="job-title">Job Title:</label>
-            <input type="text" id="job-title" name="job-title" required>
-
-            <label for="job-description">Job Description:</label>
-            <textarea id="job-description" name="job-description" required></textarea>
-
-            <label for="job-location">Job Location:</label>
-            <input type="text" id="job-location" name="job-location" required>
-
-            <label for="job-type">Job Type:</label>
-            <select id="job-type" name="job-type" required>
-                <option value="full-time">Full-time</option>
-                <option value="part-time">Part-time</option>
-                <option value="contract">Contract</option>
-            </select>
-
-            <label for="job-salary">Job Salary:</label>
-            <input type="text" id="job-salary" name="job-salary" required>
-
-            <button type="submit">Post Job</button>
-        </form>
-        
-        <div id="job-link" style="display: none;">
-            <p>Job successfully posted! Here's the link:</p>
-            <a id="job-url" href="#" target="_blank"></a>
-        </div>
-    </body>
-    </html>
-  `;
-
-  // Show the alert
-  showAlert(alertContent);
 });
 
-// Function to display the alert
-function showAlert(content) {
-  // Create a modal dialog
-  const modal = document.createElement('div');
-  modal.className = 'modal';
-  modal.innerHTML = content;
 
-  // Display the modal dialog
-  document.body.appendChild(modal);
+    let deleteIcon = document.createElement("img");
+    deleteIcon.src = "img/delete.svg"; // Replace with the actual path to your delete SVG icon
+    deleteIcon.alt = "Delete";
+    deleteIcon.classList.add("delete-icon");
+
+    // Add a click event listener to the delete icon
+    deleteIcon.addEventListener("click", () => {
+      // Handle the delete action here
+      handleDelete(jobCard, job); // Pass the job card element and job object to the handleDelete function
+    });
+
+    let openPositions = document.createElement("span");
+    openPositions.classList.add("open-positions");
+
+    if (job.openPositions == 1) {
+      openPositions.innerHTML = `${job.openPositions} open position`;
+    } else {
+      openPositions.innerHTML = `${job.openPositions} open positions`;
+    }
+
+    jobCard.appendChild(image);
+    jobCard.appendChild(title);
+    jobCard.appendChild(details);
+    jobCard.appendChild(detailsBtn);
+    jobCard.appendChild(deleteIcon); // Add the delete icon
+    jobCard.appendChild(editIcon); // Add the edit icon
+    jobCard.appendChild(openPositions);
+
+    jobsContainer.appendChild(jobCard);
+  }
+});
 }
 
-        let editIcon = document.createElement("img");
-        editIcon.src = "img/edit.svg"; // Replace with the actual path to your edit SVG icon
-        editIcon.alt = "Edit";
-        editIcon.classList.add("edit-icon");
+createJobListingCards();
 
-        // Add a click event listener to the edit icon
-        editIcon.addEventListener("click", () => {
-        // Handle the edit action here
-        handleEdit(job);
-        });
+jobSearch.addEventListener("input", (e) => {
+searchTerm = e.target.value;
 
-        let openPositions = document.createElement("span");
-        openPositions.classList.add("open-positions");
-  
-        if (job.openPositions == 1) {
-          openPositions.innerHTML = `${job.openPositions} open position`;
-        } else {
-          openPositions.innerHTML = `${job.openPositions} open positions`;
-        }
-  
-        jobCard.appendChild(image);
-        jobCard.appendChild(title);
-        jobCard.appendChild(details);
-        jobCard.appendChild(detailsBtn);
-        jobCard.appendChild(deleteIcon); // Add the delete icon
-        jobCard.appendChild(editIcon); // Add the edit icon
-        jobCard.appendChild(openPositions);
-  
-        jobsContainer.appendChild(jobCard);
-      }
-    });
-  };
-  
-  createJobListingCards();
-  
-  jobSearch.addEventListener("input", (e) => {
-    searchTerm = e.target.value;
-  
-    createJobListingCards();
-  });
+createJobListingCards();
+});

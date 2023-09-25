@@ -231,8 +231,8 @@ img.avt{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    position: relative;
-    bottom: auto;
+    margin-left: 260px; /* Adjust the margin as needed */
+    position: absolute;
   }
   /* CSS to make the delete icon smaller */
   .delete-icon {
