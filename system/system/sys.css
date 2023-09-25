@@ -116,6 +116,7 @@ form .txt{
     color: black;
     transform: translate(-50%);
     font-size: 16px;
+    font-weight: bold;
     pointer-events: none;
 }
 
@@ -173,6 +174,7 @@ input[type="submit"]:hover{
     text-align: center;
     font-size: 16px;
     color: black;
+    font-weight: bold;
 }
 
 
