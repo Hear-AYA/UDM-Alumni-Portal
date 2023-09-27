@@ -256,9 +256,6 @@ jobs.forEach((job) => {
     let jobCard = document.createElement("div");
     jobCard.classList.add("job");
 
-    let image = document.createElement("img");
-    image.src = job.image;
-
     let title = document.createElement("h3");
     title.innerHTML = job.title;
     title.classList.add("job-title");
@@ -314,7 +311,6 @@ if (editButton) {
       openPositions.innerHTML = `${job.openPositions} open positions`;
     }
 
-    jobCard.appendChild(image);
     jobCard.appendChild(title);
     jobCard.appendChild(details);
     jobCard.appendChild(detailsBtn);
