@@ -97,91 +97,30 @@ const positionTitleInput = createFormInput(
   job.title
 );
 
+const salaryInput = createFormInput(
+  "Monthly Salary",
+  "text",
+  job.monthlySalary || ""
+);
+
 const requirementsInput = createFormInput(
   "Requirements",
   "text",
   job.requirements || ""
 );
 
-const salaryInput = createFormInput(
-  "Salary/Job/Pay Grade",
+const qualificationsInput = createFormInput(
+  "Qualifications Standard",
   "text",
-  job.salary || ""
-);
-
-const monthlySalaryInput = createFormInput(
-  "Monthly Salary",
-  "text",
-  job.monthlySalary || ""
-);
-
-// Qualifications section
-const qualificationsFieldset = document.createElement("fieldset");
-qualificationsFieldset.innerHTML = "<legend>Qualifications</legend>";
-
-const educationInput = createFormInput(
-  "Education",
-  "text",
-  job.qualifications?.education || ""
-);
-
-const trainingInput = createFormInput(
-  "Training",
-  "text",
-  job.qualifications?.training || ""
-);
-
-const experienceInput = createFormInput(
-  "Experience",
-  "text",
-  job.qualifications?.experience || ""
-);
-
-const eligibilityInput = createFormInput(
-  "Eligibility",
-  "text",
-  job.qualifications?.eligibility || ""
-);
-
-const researchOutputInput = createFormInput(
-  "Research Output",
-  "text",
-  job.qualifications?.researchOutput || ""
-);
-
-const communityExtensionServiceInput = createFormInput(
-  "Community Extension Service",
-  "text",
-  job.qualifications?.communityExtensionService || ""
-);
-
-const competencyInput = createFormInput(
-  "Competency (if applicable)",
-  "text",
-  job.qualifications?.competency || ""
-);
-
-const placeOfAssignmentInput = createFormInput(
-  "Place of Assignment",
-  "text",
-  job.qualifications?.placeOfAssignment || ""
+  job.qualifications|| ""
 );
 
 // Append the form fields to the form
 editForm.appendChild(positionTitleInput);
-editForm.appendChild(requirementsInput);
 editForm.appendChild(salaryInput);
-editForm.appendChild(monthlySalaryInput);
+editForm.appendChild(requirementsInput);
+editForm.appendChild(qualificationsInput);
 
-qualificationsFieldset.appendChild(educationInput);
-qualificationsFieldset.appendChild(trainingInput);
-qualificationsFieldset.appendChild(experienceInput);
-qualificationsFieldset.appendChild(eligibilityInput);
-qualificationsFieldset.appendChild(researchOutputInput);
-qualificationsFieldset.appendChild(communityExtensionServiceInput);
-qualificationsFieldset.appendChild(competencyInput);
-qualificationsFieldset.appendChild(placeOfAssignmentInput);
-editForm.appendChild(qualificationsFieldset);
 
 // Add a submit button for the form
 const submitButton = document.createElement("button");
@@ -191,21 +130,10 @@ submitButton.addEventListener("click", (e) => {
 
   // Update the job details based on the form inputs
   job.title = positionTitleInput.querySelector("input").value;
+  job.monthlySalary = salaryInput.querySelector("input").value;
   job.requirements = requirementsInput.querySelector("input").value;
-  job.salary = salaryInput.querySelector("input").value;
-  job.monthlySalary = monthlySalaryInput.querySelector("input").value;
+  job.qualifications = qualificationsInput.querySelector("input").value;
   
-  job.qualifications = {
-    education: educationInput.querySelector("input").value,
-    training: trainingInput.querySelector("input").value,
-    experience: experienceInput.querySelector("input").value,
-    eligibility: eligibilityInput.querySelector("input").value,
-    researchOutput: researchOutputInput.querySelector("input").value,
-    communityExtensionService: communityExtensionServiceInput.querySelector("input").value,
-    competency: competencyInput.querySelector("input").value,
-    placeOfAssignment: placeOfAssignmentInput.querySelector("input").value,
-  };
-
   // Close the edit form and update the job card
   editForm.remove();
   createJobListingCards();
