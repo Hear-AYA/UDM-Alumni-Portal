@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="css/user dash.css">
     <link rel="stylesheet" href="css/myprof.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-    <title>UDM Alumni Portal - My Profile</title>
+    <title>UDM Alumni Portal</title>
 </head>
 <body>
     <div class="container">
       <div class="topbar">
-        <p>Welcome Alumni's</p>
+        <p>Welcome Alumni!</p>
           <img src="img/udm logo.png" alt="Avatar" class="avatar">          
         </div>
         <div class="bg">
@@ -25,7 +25,7 @@
           <li>  
             <a href="upcoming events.html">
             <i class="fas fa-bullhorn"></i>
-            <div>Upcoming Events</div>
+            <div>Events</div>
             </a>
           </li>           
           <li>
@@ -50,6 +50,7 @@
         <img src="img/udm.png" alt="Avtr" class="avtr">
       </div>
       <div class="contain1">
+<form>
 <table cellpadding = "10">
 <!--------------------- First Name ------------------------------------------>
 <tr>
@@ -57,12 +58,12 @@
 <td><input type="text" name="FirstName" maxlength="50" placeholder="" />
 </td>
 </tr>
-<!------------------------ Last Name --------------------------------------->
+<!------------------------ Middle Name --------------------------------------->
 <td>Middle Initial: </td>
-<td><input type="text" name="Middle Initial" maxlength="50" placeholder="" />
+<td><input type="text" name="Middle Name" maxlength="50" placeholder="" />
 </td>
 </tr>
-<!------------------------ Middle Initial--------------------------------------->
+<!------------------------ Last Name --------------------------------------->
 <tr>
 <td>Last Name: </td>
 <td><input type="text" name="LastName" maxlength="50" placeholder=""/>
@@ -78,37 +79,36 @@
 <td>Contact Number: </td>
 <td>
 <input type="text" name="MobileNumber" maxlength="10" placeholder=""/>
-
+</td>
+</tr>
+<!------------------- Award Achievement ---------------------------------------->
 <tr>
 <td>Award/Achievement: </td>
 <td><input type="text" name="Award/Achievement" maxlength="50" placeholder="" />
 </td>
 </tr>
-<!------------------------ Award Achievement --------------------------------------->
+<!------------------------ Year Graduated --------------------------------------->
 <tr>
 <td>Year Graduated: </td>
 <td><input type="text" name="Year Graduated" maxlength="50" placeholder="" />
 </td>
 </tr>
-<!------------------------ Year Graduated--------------------------------------->
+<!------------------------ Current Job --------------------------------------->
 <tr>
 <td>Current Job: </td>
 <td><input type="text" name="Current Job" maxlength="50" placeholder="" />
 </td>
 </tr>
-<!------------------------ Current Job--------------------------------------->
+<!------------------------ Job Exp --------------------------------------->
 <tr>
-<td>Job Expirience: </td>
+<td>Job Experience: </td>
 <td><input type="text" name="Job Expirience" maxlength="50" placeholder="" />
 </td>
 </tr>
-<!------------------------ Job Expirience --------------------------------------->
+<!------------------------ Skills --------------------------------------->
 <tr>
 <td>Skills and Expertise: </td>
 <td><input type="text" name="Skills and Expertise" maxlength="50" placeholder="" />
-</td>
-</tr>
-<!------------------------ Job Expertise --------------------------------------->
 </td>
 </tr>
 <!---------------------- Gender ------------------------------------->
@@ -123,7 +123,7 @@ Female
 </tr>
 <!--------------------------Date Of Birth----------------------------------->
 <tr>
-<td>Date of Birth(DOB): </td>
+<td>Date of Birth : </td>
 <td>
 <select name="BirthDay" id="Birthday_Day">
 <option value="-1">Day:</option>
@@ -176,6 +176,10 @@ Female
 </select>
 <select name="BirthdayYear" id="Birthday_Year">
 <option value="-1">Year:</option>
+<option value="2019">2023</option>
+<option value="2019">2022</option>
+<option value="2019">2021</option>
+<option value="2019">2020</option>
 <option value="2019">2019</option>
 <option value="2018">2018</option>
 <option value="2017">2017</option>
@@ -219,44 +223,26 @@ Female
 </select>
 </td>
 </tr>
-</td>
-</tr>
 <!---------------------------- Courses ----------------------------------->
-<tr>
-<td>Courses<br />Applied For:</td>
-<td>
-<input type="radio" name="CourseBCA" value="BCA">
-BCA(Bachelor of Computer Applications)<br>
-<input type="radio" name="CourseBCom" value="B.Com">
-B.Com(Bachelor of Commerce)<br>
-<input type="radio" name="CourseBSc" value="B.Sc">
-B.Sc(Bachelor of Science)<br>
-<input type="radio" name="CourseBA" value="B.A">
-BA(Bachelor of Arts)<br>
-<input type="radio" name="CourseMCA" value="BCA">
-MCA(Master of Computer Applications)<br>
-<input type="radio" name="CourseMCom" value="B.Com">
-M.Com(Master of Commerce)<br>
-<input type="radio" name="CourseMSc" value="B.Sc">
-M.Sc(Master of Science)<br>
-<input type="radio" name="CourseMA" value="B.A">
-MA(Master of Arts)<br>
-</td>
-</tr>
-<tr>
-  <td>Other courses: </td>
+  <td>Degree: </td>
   <td><input type="text" name="Othercourse" maxlength="50" placeholder="" />
   </td>
   </tr>
+<!--------- File Upload ------------>
+<tr>
+  <td>Upload Picture: </td>
+  <td> <input type="file" id="file" />
+    <label for="file"></label></td>
+</tr>
 <!----------------------- Submit and Reset ------------------------------->
 <tr>
 <td colspan="2" align="center">
 <input type="submit" value="Submit">
-<input type="reset" value="Reset">
 </td>
 </tr>
+<!--------- End ------------>
 </table>
 </form>
 </div>
 </body>
-</html>
+</html> 
