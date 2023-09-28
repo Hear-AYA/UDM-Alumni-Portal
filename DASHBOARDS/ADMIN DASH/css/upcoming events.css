@@ -1,20 +1,58 @@
-/* Events css starts  here */
-
 .container2 {
-    padding-right: 20px;
-    padding-top: 15px;
+    padding-right: 45px;
+    padding-top: 2px;
+    padding-bottom: 555px;
     padding-left: 292px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 60px;
+    margin-top: 59px;
     margin-bottom: 10px;
     height: auto;
     font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;
+    line-height: 1.42857;
     background-color: #eddc86;
- 
-}
+
+  
+  }
+  
+  .button {
+    
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius : 5px;
+
+
+  }
+  
+  .button1 {
+    background-color: #4CAF50; 
+    color: black; 
+    
+  }
+  
+  .button1:hover {
+    background-color: #e7a515;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: #e7a515;
+    color: black; 
+    
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+
 .searchForm {
     position: relative;
 }
@@ -90,7 +128,16 @@
 }
 
 .tab-content {
-    margin: 50px 0 20px 0;
+  margin: 31px 0 20px 0;
+  padding-right: 0px;
+  padding-top: -3px;
+  padding-left: 6px;
+  margin-right: -8px;
+  margin-left: 12px;
+  margin-top: 10px;
+  margin-bottom: 27px;
+  height: auto;
+    
 }
 .media > .pull-left {
     margin-right: 29px;
