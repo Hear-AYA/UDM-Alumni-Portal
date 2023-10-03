@@ -25,32 +25,32 @@
         <h1>Dashboard</h1>
           <ul>
           <li>  
-            <a href="announcement.html">
+            <a href="upcoming events.php">
             <i class="fas fa-bullhorn"></i>
-            <div>Announcement</div>
+            <div>Upcoming Events</div>
             </a>
           </li>           
           <li>
-            <a href="myprofile.html">
+            <a href="myprofile.php">
               <i class="fas fa-id-card"></i>
-              <div>My Profile</div>
+              <div>Alumni Records</div>
             </a>
           </li>
           <li>
-            <a href="chart.php">
+            <a href="Job.php">
               <i class="fas fa-user-tie"></i>
               <div>Job Offerings</div>
             </a>
           </li>
           <li>
-            <a href="mapping.html">
+            <a href="mapping.php">
               <i class="fas fa-map-marked-alt"></i>
               <div>Mapping Alumni Trajectories</div>
             </a>
           </li>
           <!--
           <li>
-            <a href="AddData.html">
+            <a href="AddData.php">
               <i class="fas fa-users"></i>
               <div>Add Data</div>
             </a>
