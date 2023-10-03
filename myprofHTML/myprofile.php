@@ -23,9 +23,9 @@
         <h1>Dashboard</h1>
           <ul>
           <li>  
-            <a href="upcoming events.html">
+            <a href="announcement.html">
             <i class="fas fa-bullhorn"></i>
-            <div>Events</div>
+            <div>Announcement</div>
             </a>
           </li>           
           <li>
@@ -50,102 +50,101 @@
         <img src="img/udm.png" alt="Avtr" class="avtr">
       </div>
       <div class="contain1">
-<form>
+<form action="conn.php" method="POST">
 <table cellpadding = "10">
 <!--------------------- First Name ------------------------------------------>
 <tr>
 <td>First Name: </td>
-<td><input type="text" name="FirstName" maxlength="50" placeholder="" />
+<td><input type="text" name="Fname" maxlength="50" id="Fname" placeholder="First Name" required />
 </td>
 </tr>
 <!------------------------ Middle Name --------------------------------------->
 <td>Middle Initial: </td>
-<td><input type="text" name="Middle Name" maxlength="50" placeholder="" />
+<td><input type="text" name="Mname" maxlength="50" id="Mname"  placeholder="Middle Name" required />
 </td>
 </tr>
 <!------------------------ Last Name --------------------------------------->
 <tr>
 <td>Last Name: </td>
-<td><input type="text" name="LastName" maxlength="50" placeholder=""/>
+<td><input type="text" name="Lname" maxlength="50" id="Lname" placeholder="Last Name" required />
 </td>
 </tr>
 <!-------------------------- Email ID ------------------------------------->
 <tr>
 <td>Email ID: </td>
-<td><input type="email" name="EmailID" maxlength="100" placeholder=""/></td>
+<td><input type="text" name="email" maxlength="100" id="email" placeholder="Email" required /></td>
 </tr>
 <!-------------------------- Mobile Number ------------------------------------->
 <tr>
 <td>Contact Number: </td>
 <td>
-<input type="text" name="MobileNumber" maxlength="10" placeholder=""/>
+<input type="text" name="cnum" maxlength="11" id="cnum" placeholder="Contact Number" required />
 </td>
 </tr>
 <!------------------- Award Achievement ---------------------------------------->
 <tr>
 <td>Award/Achievement: </td>
-<td><input type="text" name="Award/Achievement" maxlength="50" placeholder="" />
+<td><input type="text" name="aa" maxlength="50" id="aa" placeholder="Awards" required />
 </td>
 </tr>
 <!------------------------ Year Graduated --------------------------------------->
 <tr>
 <td>Year Graduated: </td>
-<td><input type="text" name="Year Graduated" maxlength="50" placeholder="" />
+<td><input type="text" name="grad" maxlength="50" id="grad" placeholder="Year" required />
 </td>
 </tr>
 <!------------------------ Current Job --------------------------------------->
 <tr>
 <td>Current Job: </td>
-<td><input type="text" name="Current Job" maxlength="50" placeholder="" />
+<td><input type="text" name="cjob" maxlength="50" id="cjob" placeholder="Current Job" required />
 </td>
 </tr>
 <!------------------------ Job Exp --------------------------------------->
 <tr>
 <td>Job Experience: </td>
-<td><input type="text" name="Job Expirience" maxlength="50" placeholder="" />
+<td><input type="text" name="jobexp" maxlength="50" id="jobexp" placeholder="Job Experience" required />
 </td>
 </tr>
 <!------------------------ Skills --------------------------------------->
 <tr>
 <td>Skills and Expertise: </td>
-<td><input type="text" name="Skills and Expertise" maxlength="50" placeholder="" />
+<td><input type="text" name="saexp" maxlength="50" id="saexp" placeholder="Skill/s" required />
 </td>
 </tr>
 <!---------------------- Gender ------------------------------------->
 <tr>
 <td>Gender: </td>
 <td>
-<input type="radio" name="Gender" value="Male" />
+<input type="radio" name="gender" id="gender" value="Male" />
 Male
-<input type="radio" name="Gender" value="Female" />
+<input type="radio" name="gender" id="gender" value="Female" />
 Female
 </td>
 </tr>
 <!--------------------------Date Of Birth----------------------------------->
 <tr>
-  <td>Date of Birth : </td>
-  <td>
-    <input type="date" name="dateofbirth" class="date">
-  </td>
-  </tr>
-  </td>
-  </tr>
+<td>Date of Birth : </td>
+<td>
+  <input type="date" name="dateofbirth" class="date">
+</td>
+</tr>
+</td>
+</tr>
 <!---------------------------- Courses ----------------------------------->
   <td>Degree: </td>
-  <td><input type="text" name="Othercourse" maxlength="50" placeholder="" />
+  <td><input type="text" name="course" maxlength="50" id="course" placeholder="Degree" required />
   </td>
   </tr>
 <!--------- File Upload ------------>
 <tr>
   <td>Upload Picture: </td>
-  <td> <input type="file" id="file" />
+  <td> <input type="file" id="avatar1" name="avatar1" />
     <label for="file"></label></td>
 </tr>
 <!----------------------- Submit and Reset ------------------------------->
 <tr>
 <td colspan="2" align="center">
 <input type="submit" value="Submit">
-<input type="button" value="Edit">
 </td>
 </tr>
 <!--------- End ------------>
