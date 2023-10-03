@@ -238,7 +238,8 @@ img.avt{
     margin-left: 267px; /* Adjust the margin as needed */
     position: absolute;
     margin-bottom: 10px;
-    top: 23px
+    top: 23px;
+    z-index: 12;
   }
   /* CSS to make the delete icon smaller */
   .delete-icon {

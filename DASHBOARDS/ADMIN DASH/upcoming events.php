@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/user dash.css">
+    <link rel="stylesheet" href="css/admin dash.css">
     <link rel="stylesheet" href="css/upcoming events.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -19,37 +19,38 @@
         <p>Welcome Alumni!</p>
           <img src="img/udm logo.png" alt="Avatar" class="avatar">          
         </div>
-
+  
+       
       <div class="sidebar">
         <h1>Dashboard</h1>
           <ul>
           <li>  
-            <a href="upcoming events.html">
+            <a href="upcoming events.php">
             <i class="fas fa-bullhorn"></i>
-            <div>Events</div>
+            <div>Upcoming Events</div>
             </a>
           </li>           
           <li>
-            <a href="myprofile.html">
+            <a href="myprofile.php">
               <i class="fas fa-id-card"></i>
-              <div>My Profile</div>
+              <div>Alumni Records</div>
             </a>
           </li>
           <li>
-            <a href="Job.html">
+            <a href="Job.php">
               <i class="fas fa-user-tie"></i>
               <div>Job Offerings</div>
             </a>
           </li>
           <li>
-            <a href="mapping.html">
+            <a href="mapping.php">
               <i class="fas fa-map-marked-alt"></i>
               <div>Mapping Alumni Trajectories</div>
             </a>
           </li>
           <!--
           <li>
-            <a href="AddData.html">
+            <a href="AddData.php">
               <i class="fas fa-users"></i>
               <div>Add Data</div>
             </a>

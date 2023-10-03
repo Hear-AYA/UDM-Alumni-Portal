@@ -1,12 +1,15 @@
 <?php 
-    $hostName = "localhost";
-    $email = "root";
-    $password = "";
-    $dbName = "regsdb";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "regsdb";
 
-    $conn = mysqli_connect ($hostName, $email, $password, $dbName);
-        if (!$conn) {
-            die ("Something went wrong;");
-        }
+   // Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
 
 ?>

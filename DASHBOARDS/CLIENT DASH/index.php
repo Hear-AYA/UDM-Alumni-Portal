@@ -14,7 +14,7 @@
             <img src="img/udm logo.png" alt="UDMLOGO">
             <label class="LOGO">Universidad De Manila</label>
             <ul>
-                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="signup.php">Sign Up</a></li>
             </ul>
         </div>
     </nav>
@@ -36,7 +36,7 @@
             <div class="pass">Forgot Password?</div>
                 <input type="submit" value="Login">
             <div class="signup">
-                Don't have an account? <a href="signup.html">Sign up</a> here!
+                Don't have an account? <a href="signup.php">Sign up</a> here!
             </div>
         </form>
     </div>
