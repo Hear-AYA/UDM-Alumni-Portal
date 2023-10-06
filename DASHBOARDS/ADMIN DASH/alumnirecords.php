@@ -1,3 +1,6 @@
+<?php
+    include'connect/connect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,32 +27,32 @@
           <h1>Dashboard</h1>
             <ul>
             <li>  
-              <a href="upcoming events.html">
+              <a href="upcoming events.php">
               <i class="fas fa-bullhorn"></i>
               <div>Upcoming Event</div>
               </a>
             </li>           
             <li>
-              <a href="alumnirecords.html">
+              <a href="alumnirecords.php">
                 <i class="fas fa-id-card"></i>
                 <div>Alumni Records</div>
               </a>
             </li>
             <li>
-              <a href="Job.html">
+              <a href="Job.php">
                 <i class="fas fa-user-tie"></i>
                 <div>Job Offerings</div>
               </a>
             </li>
             <li>
-              <a href="mapping.html">
+              <a href="mapping.php">
                 <i class="fas fa-map-marked-alt"></i>
                 <div>Mapping Alumni Trajectories</div>
               </a>
             </li>
             <!--
             <li>
-              <a href="AddData.html">
+              <a href="AddData.php">
                 <i class="fas fa-users"></i>
                 <div>Add Data</div>
               </a>
@@ -58,37 +61,48 @@
           </ul>
             <img src="img/udm.png" alt="Avtr" class="avtr">
           </div>
-<table>
+    <table>
         <tr>
-            <th>#</th>
             <th>Avatar</th>
             <th>Name</th>
             <th>Course Graduated</th>
             <th>Action</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td><img src="#" alt="Avatar"></td>
-            <td>Juan Dela Cruz</td>
-            <td>BS Information Technology</td>
-            <td><button class="view">View</button><button class="del">Delete</button></td>
-        </tr>
 
-        <tr>
-            <td>2</td>
-            <td><img src="#" alt="Avatar"></td>
-            <td>Don Juan M. Ponce</td>
-            <td>BS Information Technology</td>
-            <td><button class="view">View</button><button class="del">Delete</button></td>
-        </tr>
+        <?php
+            $sql = "SELECT * FROM regsinfo";
+            $result = $conn->query($sql);
 
-        <tr>
-            <td>3</td>
-            <td><img src="#" alt="Avatar"></td>
-            <td>Juanico Bridge</td>
-            <td>BS Civil Engineering</td>
-            <td><button class="view">View</button><button class="del">Delete</button></td>
-        </tr>
+            if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+               extract($row);
+        ?>
+          <tr>
+              <td>
+                  <?php
+                    if($img_loc!==""){
+                      ?>
+                        <img src="../CLIENT DASH/uploads/<?php echo$img_loc?>" width="100px" height="100px" style="border-radius:100px;">
+                      <?php
+                    }else{
+                      ?>
+                        <img src="../../dummy.png" width="100px" height="100px">
+                      <?php
+                    }
+                  ?>
+              </td>
+              <td><?php echo$fullName?></td>
+              <td><?php echo$degree?></td>
+              <td>
+                <a class="view" href="record.php?email=<?php echo$email?>">View</a> | <a class="view" href="record_edit.php?email=<?php echo$email?>">Edit</a>
+              </td>
+          </tr>
+        <?php   
+              }
+            }
+        ?>
+        
     </table>
 </body>
 </html>

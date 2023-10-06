@@ -1,3 +1,7 @@
+<?php
+    require_once "../ADMIN DASH/connect/onnect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,11 +30,11 @@
         <h1>Login</h1>
         <form method="post">
             <div class="txt">
-                <input type="text" required>
+                <input type="email" name="email" required>
                 <label>Username</label>
             </div>
             <div class="txt">
-                <input type="password" required>
+                <input type="password" name="pasword" required>
                 <label>Password</label>
             </div>
             <div class="pass">Forgot Password?</div>
@@ -42,3 +46,48 @@
     </div>
 </body>
 </html>
+<?php
+    if(isset($_POST['email'])){
+        extract($_POST);
+
+        
+            $email = $_POST['email'];
+            $pass = $_POST['password'];
+                
+
+            // $sql = "SELECT * FROM regsinfo WHERE email = '$email'";
+            // $result = $conn->query($sql);
+
+            // if ($result->num_rows > 0) {
+            //   // output data of each row
+            //   while($row = $result->fetch_assoc()) {
+            //     //echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+            //   }
+            // } else {
+            //     echo "<div>Email does not match</div>";
+            // }  
+
+            $sql = "SELECT * FROM regsinfo WHERE email = '$email'";
+            $result = mysqli_query($conn, $sql);
+            $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+            if ($user) {
+
+                
+
+                if ($pass == $user["pass"]) {
+                    session_start();
+                    $_SESSION["email"] = $email;
+                    header("Location: myprofile.php");
+                    die();
+                }else{
+                    echo "<div>Password does not match</div>";
+                }
+            }else{
+                    echo "<div>Email does not match</div>";
+            }
+                
+        
+
+    }
+?>

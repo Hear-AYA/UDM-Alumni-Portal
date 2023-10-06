@@ -1,3 +1,59 @@
+<?php
+    require_once "../ADMIN DASH/connect/connect.php";
+    session_start();
+    if(isset($_POST['email'])){
+        extract($_POST);
+
+        
+            $email = $_POST['email'];
+            $pass = $_POST['password'];
+                
+
+            // $sql = "SELECT * FROM regsinfo WHERE email = '$email'";
+            // $result = $conn->query($sql);
+
+            // if ($result->num_rows > 0) {
+            //   // output data of each row
+            //   while($row = $result->fetch_assoc()) {
+            //     //echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+            //   }
+            // } else {
+            //     echo "<div>Email does not match</div>";
+            // }  
+
+            $sql = "SELECT * FROM regsinfo WHERE email = '$email'";
+            $result = mysqli_query($conn, $sql);
+            $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+            if ($user) {
+
+                
+
+                if ($pass == $user["pass"]) {
+                    
+                    $_SESSION["email"] = $email;
+                    header("Location: upcoming events.php");
+                    die();
+                }else{
+                    ?>
+                    <script type="text/javascript">
+                        alert('Password does not match');
+                    </script>
+                    <?php
+                }
+            }else{
+                    ?>
+                    <script type="text/javascript">
+                        alert('Email does not match');
+                    </script>
+                    <?php
+            }
+                
+        
+
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,13 +80,13 @@
     
     <div class="container">
         <h1>Login</h1>
-        <form method="post">
+        <form method="POST">
             <div class="txt">
-                <input type="text" required>
+                <input type="email" name="email" required>
                 <label>Username</label>
             </div>
             <div class="txt">
-                <input type="password" required>
+                <input type="password" name="password" required>
                 <label>Password</label>
             </div>
             <div class="pass">Forgot Password?</div>

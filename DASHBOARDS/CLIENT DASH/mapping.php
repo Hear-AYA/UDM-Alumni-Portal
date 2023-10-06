@@ -1,3 +1,21 @@
+<?php
+     require_once "../ADMIN DASH/connect/connect.php";
+    session_start();
+
+    if(!isset($_SESSION['email'])){
+      header('location: index.php');
+    }
+
+    $email=$_SESSION['email'];
+    $emails=$_SESSION['email'];
+
+
+    $sql = "SELECT * FROM regsinfo WHERE email='$email' LIMIT 1";
+    $result = $conn->query($sql);
+
+    $row = $result->fetch_assoc();
+    extract($row);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,82 +81,23 @@
     </div>
 
 	<!-- Create Form -->
-	<form id="form">
-
-		<!-- Details -->
-		<div class="form-control">
-			<label for="name" id="label-name">
-				Name
-			</label>
-
-			<!-- Input Type Text -->
-			<input type="text"
-				id="name"
-				placeholder="Enter your name" required/>
-		</div>
-
-		<div class="form-control">
-			<label for="email" id="label-email">
-				Email
-			</label>
-
-			<!-- Input Type Email-->
-			<input type="email"
-				id="email"
-				placeholder="Enter your email" required/>
-		</div>
-
-		<div class="form-control">
-			<label for="age" id="label-age">
-				Age
-			</label>
-
-			<!-- Input Type Text -->
-			<input type="text"
-				id="age"
-				placeholder="Enter your age" required/>
-		</div>
-
-		<div class="form-control">
-            <label>
-                Sex
-            </label>
- 
-            <!-- Input Type Radio Button -->
-            <label for="recommed-1">
-                <input type="radio"
-                       id="recommed-1"
-                       name="recommed"> Male</input>
-            </label>
-            <label for="recommed-2">
-                <input type="radio"
-                       id="recommed-2"
-                       name="recommed"> Female</input>
-            </label>
-
-			<label for="recommed-3">
-                <input type="radio"
-                       id="recommed-3"
-                       name="recommed"> Others</input>
-            </label>
-        </div>
-		
+	<form id="form" method="POST" >
 		<div class="form-control">
 			<label for="question" id="label-question">
 				1. 	Is your current job directly related
 					<br><p style="text-indent: 17px;">to your college major?</p>
 			</label>
-
+			<input type="hidden" name="alumni_id" value="<?php echo$id?> ">
 			<label for="recommed-4">
 			<input type="radio"
 				id="recommed-4"
-				name="rad1"> Yes</input>
+				name="rad1" value="1"> Yes</input>
 			</label>
 
 			<label for="recommed-5">
 			<input type="radio"
 				id="recommed-5"
-				name="rad1"> No</input>
+				name="rad1" value="0"> No</input>
 			</label>
 		</div>
 
@@ -151,13 +110,13 @@
 			<label for="recommed-6">
 				<input type="radio"
 					id="recommed-6"
-					name="rad2"> Yes</input>
+					name="rad2" value="1"> Yes</input>
 				</label>
 	
 				<label for="recommed-7">
 				<input type="radio"
 					id="recommed-7"
-					name="rad2"> No</input>
+					name="rad2" value="0"> No</input>
 				</label>
 		</div>
 
@@ -170,13 +129,13 @@
 			<label for="recommed-8">
 				<input type="radio"
 					id="recommed-8"
-					name="rad3"> Yes</input>
+					name="rad3" value="1"> Yes</input>
 				</label>
 	
 				<label for="recommed-9">
 				<input type="radio"
 					id="recommed-9"
-					name="rad3"> No</input>
+					name="rad3" value="0"> No</input>
 				</label>
 		</div>
 
@@ -190,13 +149,13 @@
 			<label for="recommed-10">
 				<input type="radio"
 					id="recommed-10"
-					name="rad4"> Yes</input>
+					name="rad4" value="1"> Yes</input>
 				</label>
 	
 				<label for="recommed-11">
 				<input type="radio"
 					id="recommed-11"
-					name="rad4"> No</input>
+					name="rad4" value="0"> No</input>
 				</label>
 		</div>
 
@@ -209,13 +168,13 @@
 			<label for="recommed-12">
 				<input type="radio"
 					id="recommed-12"
-					name="rad5"> 0 to 6 months</input>
+					name="rad5" value="1"> 0 to 6 months</input>
 				</label>
 	
 				<label for="recommed-13">
 				<input type="radio"
 					id="recommed-13"
-					name="rad5"> 7 months or longer</input>
+					name="rad5" value="0"> 7 months or longer</input>
 				</label>
 		</div>
 
@@ -230,32 +189,31 @@
 			<label for="recommed-14">
 				<input type="radio"
 					id="recommed-14"
-					name="rad6"> Yes</input>
+					name="rad6" value="1"> Yes</input>
 				</label>
-	
 				<label for="recommed-15">
 				<input type="radio"
 					id="recommed-15"
-					name="rad6"> No</input>
+					name="rad6" value="0"> No</input>
 				</label>
 		</div>
 
 		<div class="form-control">
 			<label for="question" id="label-question">
 				7. While at UDM, did you have any
-				<br><p style="text-indent: 19px;">idea that your current job existed?</p>
+				<br><p style="text-indent: 19px;">Idea that your current job existed?</p>
 			</label>
 
 			<label for="recommed-16">
 				<input type="radio"
 					id="recommed-16"
-					name="rad7"> Yes</input>
+					name="rad7" value="1"> Yes</input>
 				</label>
 	
 				<label for="recommed-17">
 				<input type="radio"
 					id="recommed-17"
-					name="rad7"> No</input>
+					name="rad7" value="0"> No</input>
 				</label>
 		</div>
 
@@ -268,21 +226,66 @@
 			<label for="recommed-18">
 				<input type="radio"
 					id="recommed-18"
-					name="rad8"> Yes</input>
+					name="rad8" value="1"> Yes</input>
 				</label>
 	
 				<label for="recommed-19">
 				<input type="radio"
 					id="recommed-19"
-					name="rad8"> No</input>
+					name="rad8" value="0"> No</input>
 				</label>
 		</div>
-        
 
-		<!-- Multi-line Text Input Control -->
-		<button type="submit" value="submit">
+		<button type="submit" value="submit" name="degree">
 			Submit
 		</button>
 	</form>
+	<?php
+
+		if(isset($_POST['degree'])){
+
+			extract($_POST);
+
+			$data="";
+
+				foreach ($_POST as $k => $v) {
+					if(empty($data)){
+	          $data .= " $k='$v' ";
+	        }else{
+
+	          if($k=="degree"){
+	            $data .= "";
+	          }else{
+	            $data .= ", $k='$v' ";
+	          }
+	          
+	        }
+				}
+
+				$sql = "SELECT *  FROM professional WHERE alumni_id='$alumni_id'";
+				$result = $conn->query($sql);
+
+				if ($result->num_rows > 0) {
+				  $sql = "UPDATE professional SET $data WHERE alumni_id='$alumni_id'";
+				}else{
+					$sql = "INSERT INTO professional SET $data";
+				}
+
+				
+
+				if (mysqli_query($conn, $sql)) {
+				  ?>
+		       <script type="text/javascript">
+		         alert('Success');
+		         location.href='mapping.php';
+		       </script>
+		       <?php
+				} else {
+				  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+				}
+		}
+?>
 </body>
 </html>
+
+
