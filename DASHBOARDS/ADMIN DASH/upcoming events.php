@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+      include'connect/connect.php';
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
@@ -65,8 +67,8 @@
         <div class="container2">
           <h3>EVENTS & NEWS</h3>
           
-          <button class="button button1">Add Event & News</button>
-          <button class="button button2">Edit</button>
+          <a class="button button1" href="add_events.php">Add Event & News</a>
+          <!-- <button class="button button2">Edit</button> -->
          
           <hr>
           <div class="row">
@@ -74,7 +76,7 @@
               <div class="searchForm type2">
                 <form action="" class="searchForm"><!-- Add The Appropriate Action for Your Site's Search Form/Page -->
                   <label class="sr-only" for="searchNewsEvents">Search News and Events</label>
-                   <input id="searchNewsEvents" name="q" placeholder="What are you looking for?" type="search"> <input type="submit" value="Search">
+                   <input id="searchNewsEvents" name="data" id="data" placeholder="What are you looking for?" type="search" onkeyup="search_data(this.value);search_datas(this.value);"> <input type="submit" value="Search">
                 </form>
               </div>
             </div>
@@ -84,25 +86,22 @@
             <div class="col-lg-push-4 col-md-4 col-md-push-4">
               <div class="dropdownCategories">
               <label class="sr-only" for="dropdownNewsEvents">Category dropdown for News and Events</label>
-              <select>
-                <option value="">
-                  Select Category
-                </option>
-                <option value=""><!-- Each option value should correspond to the appropriate filter on your site's News or Events page -->
-                  Alumni party
-                </option>
-                <option value=""><!-- Each option value should correspond to the appropriate filter on your site's News or Events page -->
-                  Design
-                </option>
-                <option value=""><!-- Each option value should correspond to the appropriate filter on your site's News or Events page -->
-                  Programming
-                </option>
-                <option value=""><!-- Each option value should correspond to the appropriate filter on your site's News or Events page -->
-                  Support
-                </option>
-                <option value=""><!-- Each option value should correspond to the appropriate filter on your site's News or Events page -->
-                  Training
-                </option>
+              <select id="title" onchange="search_data(this.value);search_datas(this.value);">
+                <option></option>
+                <?php
+                  $sql = "SELECT DISTINCT title FROM announcement";
+                  $result = $conn->query($sql);
+
+                  if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                      extract($row);
+                     ?>
+                     <option><?php echo$title?></option>
+                     <?php
+                    }
+                  }
+                ?>
               </select>
               </div>
             </div>  
@@ -123,162 +122,44 @@
           <hr>
           <div class="tab-content">
             <div class="tab-pane fade in active" id="tab1">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="media">
-                    <a class="pull-left" href="#"><span class="dateEl"><em>30</em>Nov</span></a>
-                    <div class="media-body">
-                      <h4 class="media-heading">
-                        <a href="#">UNIVERSITY WEEK</a>
-                      </h4>
-                      <div class="meta-data">
-                        <span class="longDate">Nov 30, 2023</span> <span class="timeEl">12:00pm - 02:00pm</span>
-                      </div>
-                      <p>
-                        See the latest University week.
-                      </p>
-                    </div><!-- / media-body -->
-                  </div><!-- / media -->
-                  <div class="media">
-                    <a class="pull-left" href="#"><span class="dateEl"><em>11</em>Dec</span></a>
-                    <div class="media-body">
-                      <h4 class="media-heading">
-                        <a href="#">Tech Conference UDM</a>
-                      </h4>
-                      <div class="meta-data">
-                        <span class="longDate">Dec 11, 2023</span> <span class="timeEl">06:00pm - 07:30pm</span>
-                      </div>
-                      <p>
-                        Local tech entrepreneurs gather to share their knowledge.
-                      </p>
-                    </div><!-- / media-body -->
-                  </div><!-- / media -->
-                  <div class="media">
-                    <a class="pull-left" href="#"><span class="dateEl"><em>15</em>Dec</span></a>
-                    <div class="media-body">
-                      <h4 class="media-heading">
-                        <a href="#">Alumni party</a>
-                      </h4>
-                      <div class="meta-data">
-                        <span class="longDate">Dec 15, 2023</span> <span class="timeEl">03:30pm - 07:30pm</span>
-                      </div>
-                      <p>
-                        Opening party for alumni
-                      </p>
-                    </div><!-- / media-body -->
-                  </div><!-- / media -->
-                </div><!-- / .col-md-6 -->
-                <div class="col-md-6">
-                  <div class="media">
-                    <a class="pull-left" href="#"><span class="dateEl"><em>18</em>Dec</span></a>
-                    <div class="media-body">
-                      <h4 class="media-heading">
-                        <a href="#">Programming 101</a>
-                      </h4>
-                      <div class="meta-data">
-                        <span class="longDate">Dec 17, 2023</span> <span class="timeEl">06:00pm - 08:00pm</span>
-                      </div>
-                      <p>
-                        Take the basic CMS training class to see where things are and how to build custom modules.
-                      </p>
-                    </div><!-- / media-body -->
-                  </div><!-- / media -->
-                  <div class="media">
-                    <a class="pull-left" href="#"><span class="dateEl"><em>21</em>Dec</span></a>
-                    <div class="media-body">
-                      <h4 class="media-heading">
-                        <a href="#">Designing for Mobile</a>
-                      </h4>
-                      <div class="meta-data">
-                        <span class="longDate">Dec 21, 2023</span> <span class="timeEl">10:00am - 12:00pm</span>
-                      </div>
-                      <p>
-                        Get tips and information regarding how to design websites for mobile devices.
-                      </p>
-                    </div><!-- / media-body -->
-                  </div><!-- / media -->
-                  <div class="media">
-                    <a class="pull-left" href="#"><span class="dateEl"><em>21</em>Dec</span></a>
-                    <div class="media-body">
-                      <h4 class="media-heading">
-                        <a href="#">Modern Support</a>
-                      </h4>
-                      <div class="meta-data">
-                        <span class="longDate">Dec 22, 2023</span> <span class="timeEl">10:00am - 12:00pm</span>
-                      </div>
-                      <p>
-                        Learn from industry leaders about providing the best support possible.
-                      </p>
-                    </div><!-- / media-body -->
-                  </div><!-- / media -->
-                </div><!-- / .col-md-6 -->
-              </div><!-- / row -->
-              <div class="text-center">
-                <br>
-                <a class="btn btn-default" href="#">SEE ALL EVENTS</a>
+              <div class="row" id="events">
               </div>
             </div>
             <div class="tab-pane fade" id="tab2">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="blogPost--small">
-                    <div class="media">
-                      <span class="pull-left"><a href="#"><span class="date"><span>29</span> <small>Nov</small></span></a></span>
-                      <div class="media-body">
-                        <h4 class="media-heading">
-                          <a href="#">CET esports week</a>
-                        </h4>
-                        <p>
-                          Join CET week Eports tournaments
-                        </p>
-                      </div>
-                    </div>
-                  </div><!-- / blogPost -->
-                  <div class="blogPost--small">
-                    <div class="media">
-                      <span class="pull-left"><a href="#"><span class="date"><span>22</span> <small>Nov</small></span></a></span>
-                      <div class="media-body">
-                        <h4 class="media-heading">
-                          <a href="#">Universidad de Manila in collaboration with the UDM College of Law will host a Roundtable Discussion on the topic</a>
-                        </h4>
-                        <p>
-                          The Makati and Taguig Case" to be held at the UDM Palma Hall
-                        </p>
-                      </div>
-                    </div>
-                  </div><!-- / blogPost -->
-                </div><!-- / .col-md-6 -->
-                <div class="col-md-6">
-                  <div class="blogPost--small">
-                    <div class="media">
-                      <span class="pull-left"><a href="#"><span class="date"><span>12</span> <small>Nov</small></span></a></span>
-                      <div class="media-body">
-                        <h4 class="media-heading">
-                          <a href="#">The battle begins now!</a>
-                        </h4>
-                        <p>
-                          The UDM SSG proudly presents the Official Candidates of the 28th Founding Anniversary edition of Mister and Miss Universidad De Manila 2023 with the theme: "𝘔𝘢𝘬𝘢𝘣𝘢𝘺𝘢𝘯𝘨 𝘔𝘦𝘳𝘭𝘪𝘰𝘯 𝘱𝘢𝘳𝘢 𝘴𝘢 𝘔𝘢𝘬𝘢𝘣𝘢𝘨𝘰𝘯𝘨 𝘉𝘢𝘺𝘢𝘯".
-                        </p>
-                      </div>
-                    </div>
-                  </div><!-- / blogPost -->
-                  <div class="blogPost--small">
-                    <div class="media">
-                      <span class="pull-left"><a href="#"><span class="date"><span>10</span> <small>Nov</small></span></a></span>
-                      <div class="media-body">
-                        <h4 class="media-heading">
-                          <a href="#">What Is A Content Management System</a>
-                        </h4>
-                        <p>
-                          So many acronyms that most of us know a brief amount about, if at all, let alone the meaning of those three little letters we hear so often.
-                        </p>
-                      </div>
-                    </div>
-                    </div>
-                    </div>
+              <div class="row" id="news">
               </div>
             </div>
           </div>
         </div>
+        <script type="text/javascript">
+          function  search_data(){
+            var data=document.getElementById('searchNewsEvents').value;
+            var title=document.getElementById('title').value;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("events").innerHTML = this.responseText;
+              }
+            };
+            xmlhttp.open("GET", "events_news.php?data=" + data+'&title='+title+'&type=Event', true);
+            xmlhttp.send();
+          }
+          function  search_datas(){
+            var data=document.getElementById('searchNewsEvents').value;
+            var title=document.getElementById('title').value;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("news").innerHTML = this.responseText;
+              }
+            };
+            xmlhttp.open("GET", "events_news.php?data=" + data+'&title='+title+'&type=News', true);
+            xmlhttp.send();
+          }
+
+
+          search_data();
+          search_datas();
+        </script>
       </body>
       </html>
