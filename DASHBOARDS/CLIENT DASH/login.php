@@ -1,5 +1,5 @@
 <?php
-    require_once "../ADMIN DASH/connect/onnect.php";
+    require_once "../ADMIN DASH/connect/connect.php";
 ?>
 
 <!DOCTYPE html>
@@ -28,13 +28,13 @@
     
     <div class="container">
         <h1>Login</h1>
-        <form method="post">
+        <form method="POST">
             <div class="txt">
                 <input type="email" name="email" required>
                 <label>Username</label>
             </div>
             <div class="txt">
-                <input type="password" name="pasword" required>
+                <input type="password" name="password" required>
                 <label>Password</label>
             </div>
             <div class="pass">Forgot Password?</div>

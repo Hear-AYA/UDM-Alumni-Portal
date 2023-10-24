@@ -1,45 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/signup.css">
     <title> UDM Alumni Portal </title> 
+    <link rel="stylesheet" href="style.css">
    </head>
 <body>
-  <img src="img/UDM_Lights.jpg" alt="avt" class="avt">
   <div class="wrapper">
     <h2>Sign Up</h2>
-    <form action="#">
+    <form action="connect.php" method="POST">
       <div class="input-box">
-        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Full Name" id="fullName" name="fullName" required>
         <br> <br>
-        <input type="text" placeholder="Email" required>
+        <input type="text" placeholder="Email" id="email" name="email" required>
         <br> <br>
-        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Password" id="pass" name="pass" required>
         <br> <br>
-        <input type="password" placeholder="Confirm password" required>
+        <input type="password" placeholder="Confirm password" id="cpass" name="cpass" required>
         <br> <br>
-        <input type="text" placeholder="Phone Number" required>
+        <input type="number" placeholder="Phone Number" maxlength="11" id="pnum" name="pnum" required>
         <br> <br>
-        <input type="text" placeholder="Course" required>
+        <input type="text" placeholder="Course" id="course" name="course" required>
         <br> <br>
-        <input type="text" placeholder="Gender" required>
+        <input type="text" placeholder="Gender: Male/Female/Others" id="gender" name="gender" required>
       </div>
       <div class="policy">
         <input type="checkbox">
-        <h3>I accept all terms & condition</h3>
+        <h3>I accept terms and condition.</a></h3>
       </div>
       <div class="input-box button">
         <input type="Submit" value="Register">
       </div>
       <div class="text">
-        <h3>Already have an account? <a href="index.php">Login here</a></h3>
+        <h3>Already have an account? <a href="login.php">Login here</a></h3>
       </div>
     </form>
   </div>
-  <img src="img/udm logo.png" alt="avtr" class="avtr">
-</div>
+  <img src="bg/1.png" alt="">
 </body>
 </html>
