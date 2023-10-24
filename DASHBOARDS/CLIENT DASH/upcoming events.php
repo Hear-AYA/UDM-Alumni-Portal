@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>UDM Almuni Portal</title>
 </head>
-<body>
+<body style="background-color: #eddc86;">
     
   <div class="container1">
       <div class="topbar">
