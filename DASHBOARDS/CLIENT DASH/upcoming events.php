@@ -23,44 +23,36 @@
         </div>
   
        
-      <div class="sidebar">
+       <div class="sidebar">
         <h1>Dashboard</h1>
           <ul>
           <li>  
-              <a href="upcoming events.php">
-              <i class="fas fa-bullhorn"></i>
-              <div>Upcoming Event</div>
-              </a>
-            </li>           
-            <li>
-              <a href="alumnirecords.php">
-                <i class="fas fa-id-card"></i>
-                <div>Alumni Records</div>
-              </a>
-            </li>
-            <li>
-              <a href="Job.php">
-                <i class="fas fa-user-tie"></i>
-                <div>Job Offerings</div>
-              </a>
-            </li>
-            <li>
-              <a href="mapping.php">
-                <i class="fas fa-map-marked-alt"></i>
-                <div>Mapping Alumni Trajectories</div>
-              </a>
-            </li>
-          <!--
+            <a href="upcoming events.php">
+            <i class="fas fa-bullhorn"></i>
+            <div>Events</div>
+            </a>
+          </li>           
           <li>
-            <a href="AddData.php">
-              <i class="fas fa-users"></i>
-              <div>Add Data</div>
+            <a href="myprofile.php">
+              <i class="fas fa-id-card"></i>
+              <div>My Profile</div>
             </a>
           </li>
-  -->
+          <li>
+            <a href="Job.php">
+              <i class="fas fa-user-tie"></i>
+              <div>Job Offerings</div>
+            </a>
+          </li>
+          <li>
+            <a href="mapping.php">
+              <i class="fas fa-map-marked-alt"></i>
+              <div>Mapping Alumni Trajectories</div>
+            </a>
+          </li>
         </ul>
-          <img src="img/udm.png" alt="Avtr" class="avtr">
-        </div>
+        <img src="img/udm.png" alt="Avtr" class="avtr">
+      </div>
        
 
 

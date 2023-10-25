@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2023 at 06:40 AM
+-- Generation Time: Oct 24, 2023 at 10:43 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `regsdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `announcement`
+--
+
+CREATE TABLE `announcement` (
+  `id` int(250) NOT NULL,
+  `title` varchar(500) NOT NULL,
+  `description` varchar(999) NOT NULL,
+  `date_time` varchar(500) NOT NULL,
+  `from_time` varchar(500) NOT NULL,
+  `to_time` varchar(500) NOT NULL,
+  `type` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `announcement`
+--
+
+INSERT INTO `announcement` (`id`, `title`, `description`, `date_time`, `from_time`, `to_time`, `type`) VALUES
+(3, 'test', 'test', '2023-09-29', '07:40', '08:41', 'Event');
 
 -- --------------------------------------------------------
 
@@ -109,11 +132,18 @@ CREATE TABLE `regsinfo` (
 --
 
 INSERT INTO `regsinfo` (`id`, `fullName`, `img_loc`, `email`, `pass`, `cpass`, `pnum`, `course`, `gender`, `award`, `year_graduated`, `current_job`, `job_experience`, `skill_expertise`, `dateofbirth`, `degree`) VALUES
-(12, 'Alexander Avendano', '1696529040_355721356_274600031814272_1868331215881352822_n.png', 'a.avendano008@gmail.com', 'admin', 'admin', 9558456111, 'BSIT', 'Female', 'test', 'test', 'test', 'test', 'test', '2023-10-04', 'test');
+(12, 'Alexander Avendano', '1696529040_355721356_274600031814272_1868331215881352822_n.png', 'a.avendano008@gmail.com', 'admin', 'admin', 9558456111, 'BSIT', 'Female', 'test', 'test', 'test', 'test', 'test', '2023-10-04', 'test'),
+(13, 'Test1 test1', '', 'test@gmail.com', 'test', 'test', 9558456111, 'test', 'Male', '', '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `announcement`
+--
+ALTER TABLE `announcement`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `job`
@@ -138,6 +168,12 @@ ALTER TABLE `regsinfo`
 --
 
 --
+-- AUTO_INCREMENT for table `announcement`
+--
+ALTER TABLE `announcement`
+  MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `job`
 --
 ALTER TABLE `job`
@@ -153,7 +189,7 @@ ALTER TABLE `professional`
 -- AUTO_INCREMENT for table `regsinfo`
 --
 ALTER TABLE `regsinfo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
