@@ -30,10 +30,10 @@ table {
       <center>
     <table style="background: white !important; padding: 20px !!important; text-align: center;">
         <tr>
-            <th>Avatar</th>
-            <th>Name</th>
-            <th>Course Graduated</th>
-            <th>Action</th>
+            <th><center>Avatar</center></th>
+            <th><center>Name</center></th>
+            <th><center>Course Graduated</center></th>
+            <th><center>Action</center></th>
         </tr>
 
         <?php
