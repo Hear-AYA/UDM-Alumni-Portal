@@ -34,7 +34,7 @@
             </li>
             <li>
               <a href="logout.php">
-                <i class="fas fa-map-marked-alt"></i>
+                <i class="fas fa-arrow-left"></i>
                 <div>Logout</div>
               </a>
             </li>
