@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2023 at 10:43 PM
+-- Generation Time: Nov 07, 2023 at 11:33 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -72,8 +72,7 @@ CREATE TABLE `job` (
 --
 
 INSERT INTO `job` (`id`, `position_title`, `requirements`, `job`, `monthly_salary`, `education`, `training`, `experience`, `eligibility`, `research`, `community`, `competency`, `assignment`, `open_positions`) VALUES
-(1, 'test1', 'Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test2', '2'),
-(2, 'test2', 'test2', 'test2', 'test2', 'test2', 'test2', 'test2', 'test2', 'test2', 'test2', 'test2', 'test2', '4'),
+(1, 'test12', 'Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test2', '2'),
 (3, 'test4', 'test3 test3test3 test3 test3test3', 'test3', 'test3', 'test3', 'test3', 'test3', 'test3', 'test3', 'test3', 'test3', 'test3', '5');
 
 -- --------------------------------------------------------
@@ -124,16 +123,17 @@ CREATE TABLE `regsinfo` (
   `job_experience` varchar(250) NOT NULL,
   `skill_expertise` varchar(250) NOT NULL,
   `dateofbirth` varchar(250) NOT NULL,
-  `degree` varchar(250) NOT NULL
+  `degree` varchar(250) NOT NULL,
+  `address` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `regsinfo`
 --
 
-INSERT INTO `regsinfo` (`id`, `fullName`, `img_loc`, `email`, `pass`, `cpass`, `pnum`, `course`, `gender`, `award`, `year_graduated`, `current_job`, `job_experience`, `skill_expertise`, `dateofbirth`, `degree`) VALUES
-(12, 'Alexander Avendano', '1696529040_355721356_274600031814272_1868331215881352822_n.png', 'a.avendano008@gmail.com', 'admin', 'admin', 9558456111, 'BSIT', 'Female', 'test', 'test', 'test', 'test', 'test', '2023-10-04', 'test'),
-(13, 'Test1 test1', '', 'test@gmail.com', 'test', 'test', 9558456111, 'test', 'Male', '', '', '', '', '', '', '');
+INSERT INTO `regsinfo` (`id`, `fullName`, `img_loc`, `email`, `pass`, `cpass`, `pnum`, `course`, `gender`, `award`, `year_graduated`, `current_job`, `job_experience`, `skill_expertise`, `dateofbirth`, `degree`, `address`) VALUES
+(12, 'Alexander Avendano', '1696529040_355721356_274600031814272_1868331215881352822_n.png', 'a.avendano008@gmail.com', 'admin', 'admin', 9558456111, 'BSIT', 'Female', 'test', 'test', 'test', 'test', 'test', '2023-10-04', 'test', ''),
+(13, 'Test1 test1', '', 'test@gmail.com', 'test', 'test', 9558456111, 'test', 'Male', 'test', 'test', 'test', '', '', '', '', 'test');
 
 --
 -- Indexes for dumped tables
