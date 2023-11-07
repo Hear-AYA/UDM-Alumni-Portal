@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+img.avtr{
+    position: relative;
+    top: -258px;
+    left: 110px;
+    height: 72px;
+    width: 79px;
+}
+
+img.avt{
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+}
+
+.wrapper{
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  padding: 34px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  left: 450px;
+  height: 593px;
+  bottom: 6px;
+}
+.wrapper h2{
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  left: 154px;
+}
+.wrapper h2::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 87px;
+  border-radius: 12px;
+  background: #1A5D1A;
+}
+.wrapper form{
+  margin-top: 30px;
+}
+.wrapper form .input-box{
+  height: 52px;
+  margin: 18px 0;
+}
+form .input-box input{
+  height:66%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #1A5D1A;
+}
+form .policy{
+  display: flex;
+  align-items: center;
+}
+form h3{
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+  position: relative;
+  bottom: -318px;
+}
+.input-box.button input{
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #1A5D1A;
+  cursor: pointer;
+  position: relative;
+  top: 315px;
+}
+.input-box.button input:hover{
+  background: #1A5D1A;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    top: 318px;
+}
+form .text h3{
+ color: #333;
+ width: 100%;
+ text-align: center;
+ position: relative;
+ bottom: -285px;
+ left: -17px;
+ 
+}
+form .text h3 a{
+  color: #1A5D1A;
+  text-decoration: none;
+  position: relative;
+  bottom: 0px;
+}
+form .text h3 a:hover{
+  text-decoration: underline;
+}

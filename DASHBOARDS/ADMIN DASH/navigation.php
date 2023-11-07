@@ -32,6 +32,12 @@
                 <div>Mapping Alumni Trajectories</div>
               </a>
             </li>
+            <li>
+              <a href="logout.php">
+                <i class="fas fa-map-marked-alt"></i>
+                <div>Logout</div>
+              </a>
+            </li>
           </ul>
             <img src="img/udm.png" alt="Avtr" class="avtr">
         </div>
