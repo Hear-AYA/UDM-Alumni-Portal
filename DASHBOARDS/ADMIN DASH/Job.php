@@ -1,8 +1,18 @@
 <?php
     include'connect/connect.php';
     include'header.php';
-?>
+    if(isset($_GET['delete_id'])){
+      $id=$_GET['delete_id'];
+      $sql = "DELETE FROM job WHERE id='$id'";
 
+      if ($conn->query($sql) === TRUE) {
+        echo "1";
+      } else {
+        echo "Error deleting record: " . $conn->error;
+      }
+
+    }
+?>
 <body style="background: url('bg/udm.jpg');">
     <div class="container-fluid" >
       <?php
@@ -116,6 +126,8 @@ function handleDelete(jobCard, jobToDelete) {
     // Remove the job card from the DOM
     jobCard.remove();
 
+    
+
     // Find the index of the job in the jobs array based on the jobToDelete object
     const indexToDelete = jobs.findIndex((job) => job === jobToDelete);
 
@@ -124,15 +136,7 @@ function handleDelete(jobCard, jobToDelete) {
       jobs.splice(indexToDelete, 1);
     }
 
-    // var xhttp = new XMLHttpRequest();
-    // xhttp.onreadystatechange = function() {
-    //   if (this.readyState == 4 && this.status == 200) {
-        
-    //     this.responseText;
-    //   }
-    // };
-    // xhttp.open("GET", "job.php", true);
-    // xhttp.send();
+    
 }
 function createFormInput(labelText, inputType, inputValue,inputName) {
   // Create a label element
@@ -331,7 +335,7 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
   }
   }
   
-  function handleDelete(jobCard, jobToDelete) {
+  function handleDelete(jobCard, jobToDelete,link) {
   // Remove the job card from the DOM
   jobCard.remove();
   
@@ -342,6 +346,17 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
     // Remove the job from the jobs array
     jobs.splice(indexToDelete, 1);
   }
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        
+       
+      }
+    };
+    xhttp.open("GET", "Job.php"+link, true);
+    xhttp.send();
+
   }
   
   function createJobListingCards() {
@@ -374,7 +389,7 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
         // Add a click event listener to the delete icon
         deleteIcon.addEventListener("click", () => {
           // Handle the delete action here
-          handleDelete(jobCard, job);
+          handleDelete(jobCard, job,job.delete_link);
         });
   
         buttonContainer.appendChild(editIcon); // Add the edit icon to the button container
