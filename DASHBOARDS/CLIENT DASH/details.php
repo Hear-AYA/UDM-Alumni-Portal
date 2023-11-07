@@ -30,24 +30,22 @@
     
   <div class="container1">
       <div class="topbar">
-        <p>Welcome Alumni!</p>
+        <p>Welcome Almuni!</p>
           <img src="img/udm logo.png" alt="Avatar" class="avatar">          
         </div>
-  
-       
-      <div class="sidebar">
-        <h1>Dashboard</h1>
+       <div class="sidebar" style="font-size: 16px;">
+        <h1 style="margin-top: 0px; font-size: 32px;"><b>Dashboard</b></h1>
           <ul>
           <li>  
             <a href="upcoming events.php">
             <i class="fas fa-bullhorn"></i>
-            <div>Upcoming Events</div>
+            <div>Events</div>
             </a>
           </li>           
           <li>
             <a href="myprofile.php">
               <i class="fas fa-id-card"></i>
-              <div>Alumni Records</div>
+              <div>My Profile</div>
             </a>
           </li>
           <li>
@@ -62,17 +60,15 @@
               <div>Mapping Alumni Trajectories</div>
             </a>
           </li>
-          <!--
           <li>
-            <a href="AddData.php">
-              <i class="fas fa-users"></i>
-              <div>Add Data</div>
+            <a href="logout.php">
+              <i class="fas fa-arrow-left"></i>
+              <div>Logout</div>
             </a>
           </li>
-  -->
         </ul>
-          <img src="img/udm.png" alt="Avtr" class="avtr">
-        </div>
+        <img src="img/udm.png" alt="Avtr" class="avtr">
+      </div>
        
         <div class="container2">
 
