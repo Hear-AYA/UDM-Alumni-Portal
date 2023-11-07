@@ -28,8 +28,8 @@
        
         <div class="container2" >
 
-            <div class="job">
-              <canvas id="myChart" style="width:100%;max-width:50%; margin-top:20px;"></canvas>
+            <div class="job" >
+              <center><canvas id="myChart" style="width:100%;max-width:50%; margin-top:20px;"></canvas></center>
               <?php
 
                 $sql = "SELECT SUM(rad1) AS rad1,SUM(rad2) AS rad2,SUM(rad3) AS rad3,SUM(rad4) AS rad4,SUM(rad5) AS rad5,SUM(rad6) AS rad6,SUM(rad7) AS rad7,SUM(rad8) AS rad8 FROM professional";
@@ -57,7 +57,7 @@
 
               ?>
               <script>
-              const xValues = ['Question 1','Question 2','Question 3','Question 4','Question 5','Question 6','Question 7','Question 8'];
+              const xValues = ['Q 1','Q 2','Q 3','Q 4','Q 5','Q 6','Q 7','Q 8'];
               const yValues = ['<?php echo$rad1?>','<?php echo$rad2?>','<?php echo$rad3?>','<?php echo$rad4?>','<?php echo$rad5?>','<?php echo$rad6?>','<?php echo$rad7?>','<?php echo$rad8?>'];
 
               new Chart("myChart", {

@@ -51,7 +51,8 @@
               <?php echo$requirements?><br><br>\
               ",
             openPositions: "<?php echo$open_positions?>",
-            link: "#",
+            link: "details.php?id=<?php echo$id?>",
+            delete_link: "?delete_id=<?php echo$id?>",
           },
           <?php
               }
@@ -112,16 +113,26 @@ if (jobIndex !== -1) {
 }
 
 function handleDelete(jobCard, jobToDelete) {
-// Remove the job card from the DOM
-jobCard.remove();
+    // Remove the job card from the DOM
+    jobCard.remove();
 
-// Find the index of the job in the jobs array based on the jobToDelete object
-const indexToDelete = jobs.findIndex((job) => job === jobToDelete);
+    // Find the index of the job in the jobs array based on the jobToDelete object
+    const indexToDelete = jobs.findIndex((job) => job === jobToDelete);
 
-if (indexToDelete !== -1) {
-  // Remove the job from the jobs array
-  jobs.splice(indexToDelete, 1);
-}
+    if (indexToDelete !== -1) {
+      // Remove the job from the jobs array
+      jobs.splice(indexToDelete, 1);
+    }
+
+    // var xhttp = new XMLHttpRequest();
+    // xhttp.onreadystatechange = function() {
+    //   if (this.readyState == 4 && this.status == 200) {
+        
+    //     this.responseText;
+    //   }
+    // };
+    // xhttp.open("GET", "job.php", true);
+    // xhttp.send();
 }
 function createFormInput(labelText, inputType, inputValue,inputName) {
   // Create a label element
