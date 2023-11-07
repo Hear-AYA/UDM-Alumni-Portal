@@ -64,6 +64,12 @@
               <div>Mapping Alumni Trajectories</div>
             </a>
           </li>
+          <li>
+            <a href="logout.php">
+              <i class="fas fa-arrow-left"></i>
+              <div>Logout</div>
+            </a>
+          </li>
         </ul>
         <img src="img/udm.png" alt="Avtr" class="avtr">
       </div>
@@ -100,7 +106,7 @@
   <input type="hidden" name="id" value="<?php echo$id?>">
 <!--------------------- First Name ------------------------------------------>
 <tr>
-<td>Fullname Name: </td>
+<td>Fullname: </td>
 <td><input type="text" name="fullName" maxlength="50" placeholder="" value="<?php echo$fullName?>" />
 </td>
 </tr>
@@ -129,6 +135,12 @@
 </td>
 </tr>
 <!------------------------ Current Job --------------------------------------->
+<tr>
+<td>Address: </td>
+<td><input type="text" name="address" maxlength="50" placeholder="" value="<?php echo$address?>" />
+</td>
+</tr>
+<!------------------------ Address --------------------------------------->
 <tr>
 <td>Current Job: </td>
 <td><input type="text" name="current_job" maxlength="50" placeholder="" value="<?php echo$current_job?>" />
