@@ -35,20 +35,12 @@
       $to_time="";
       $type="";
     }
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/admin dash.css">
-    <link rel="stylesheet" href="css/upcoming events.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title>UDM ADMIN record</title>
-</head>
+?>
+
+<?php
+
+    include'header.php';
+?>
 <style type="text/css">
   td{
     padding: 2px 2px;
@@ -57,65 +49,19 @@
     width: ;
   }
 </style>
-<body>
-    
-  <div class="container1">
-      <div class="topbar">
-        <p>Welcome Alumni!</p>
-          <img src="img/udm logo.png" alt="Avatar" class="avatar">          
-        </div>
-  
-       
-      <div class="sidebar">
-          <h1>Dashboard</h1>
-            <ul>
-            <li>  
-              <a href="upcoming events.php">
-              <i class="fas fa-bullhorn"></i>
-              <div>Upcoming Event</div>
-              </a>
-            </li>           
-            <li>
-              <a href="alumnirecords.php">
-                <i class="fas fa-id-card"></i>
-                <div>Alumni Records</div>
-              </a>
-            </li>
-            <li>
-              <a href="Job.php">
-                <i class="fas fa-user-tie"></i>
-                <div>Job Offerings</div>
-              </a>
-            </li>
-            <li>
-              <a href="mapping.php">
-                <i class="fas fa-map-marked-alt"></i>
-                <div>Mapping Alumni Trajectories</div>
-              </a>
-            </li>
-            <!--
-            <li>
-              <a href="AddData.php">
-                <i class="fas fa-users"></i>
-                <div>Add Data</div>
-              </a>
-            </li>
-    -->
-          </ul>
-            <img src="img/udm.png" alt="Avtr" class="avtr">
-          </div>
-       
-        <div class="container2">
-
-            <div class="job">
-              <table cellpadding = "10">
-<tr>
-  <td>
-    
-
-  </td>
-</tr>
+<body style="background: url('bg/udm.jpg');">
+  <div class="container1" style="margin-top:-20px;">
+      <?php
+        include'navigation.php';
+      ?>
+<div class="container2">
 <form method="POST" >
+<table >
+  <tr>
+    <td>
+    </td>
+  </tr>
+
   <input type="hidden" name="id" value="<?php echo$id?>">
 <!--------------------- First Name ------------------------------------------>
 <tr>
@@ -175,48 +121,47 @@
     ?>
 </td>
 </tr>
-<!--------- End ------------>
-</form>
-</table><br>
-<table class="table table-striped table-border">
-  <tr>
-    <td>Title</td>
-    <td>Decription</td>
-    <td>When</td>
-    <td>From</td>
-    <td>To</td>
-    <td>Type</td>
-    <td></td>
-  </tr>
-  <?php
-    $sql = "SELECT * FROM announcement";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-      // output data of each row
-      while($row = $result->fetch_assoc()) {
-        extract($row);
-      ?>
-        <tr>
-          <td><?php echo$title?></td>
-          <td><?php echo$description?></td>
-          <td><?php echo$date_time?></td>
-          <td><?php echo$from_time?></td>
-          <td><?php echo$to_time?></td>
-          <td><?php echo$type?></td>
-          <td>
-            <a href="add_events.php?id=<?php echo$id?>">Edit</a> | 
-            <a href="add_events.php?id=<?php echo$id?>&delete=delete">Delete</a>
-          </td>
-
-        </tr>
-      <?php
-      }
-    }
-  ?>
 </table>
-            </div>
-          </div>
+</form>
+<br>
+          <table class="table table-striped table-border">
+            <tr>
+              <td>Title</td>
+              <td>Decription</td>
+              <td>When</td>
+              <td>From</td>
+              <td>To</td>
+              <td>Type</td>
+              <td></td>
+            </tr>
+            <?php
+              $sql = "SELECT * FROM announcement";
+              $result = $conn->query($sql);
+
+              if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                  extract($row);
+                ?>
+                  <tr>
+                    <td><?php echo$title?></td>
+                    <td><?php echo$description?></td>
+                    <td><?php echo$date_time?></td>
+                    <td><?php echo$from_time?></td>
+                    <td><?php echo$to_time?></td>
+                    <td><?php echo$type?></td>
+                    <td>
+                      <a href="add_events.php?id=<?php echo$id?>">Edit</a> | 
+                      <a href="add_events.php?id=<?php echo$id?>&delete=delete">Delete</a>
+                    </td>
+
+                  </tr>
+                <?php
+                }
+              }
+            ?>
+          </table>
+            
           <?php
             include'connect/connect.php';
 
@@ -270,6 +215,8 @@
                 }
             }
           ?>
+        </div>
+      </div>
         </body>
         </html>
 

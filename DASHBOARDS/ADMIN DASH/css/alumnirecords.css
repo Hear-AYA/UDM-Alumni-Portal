@@ -10,7 +10,7 @@
     right: -35px;
 }
 
-table, th, td {
+/*table, th, td {
     border: 1px solid black;
     padding: 20px;
 }
@@ -24,7 +24,8 @@ table {
     top: 130px;
     height: 50%;
     width: 75%;
-}
+    
+}*/
 
 img {
     border: 0px solid black;
@@ -59,12 +60,9 @@ img {
 }
 
 img.avatar {
-    width: 60px;
-    height: 55px;
   background-repeat: no-repeat;
   position: absolute;
   left: 95px;
-bottom: 2px;
 
 }
 
@@ -82,7 +80,7 @@ img.avt{
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    position: fixed;
+/*    position: fixed;*/
    
 }
 .user {
@@ -113,7 +111,7 @@ img.avt{
 .sidebar ul {
     margin-top: -20px;
     position: absolute;
-    left: -20px;
+    left: -16px;
 }
 
 .sidebar ul li {
