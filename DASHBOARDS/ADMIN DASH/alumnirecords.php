@@ -27,7 +27,8 @@ table {
       <?php
         include'navigation.php';
       ?>
-    <table style="background: white !important; padding: 20px !!important;">
+      <center>
+    <table style="background: white !important; padding: 20px !!important; text-align: center;">
         <tr>
             <th>Avatar</th>
             <th>Name</th>
@@ -70,6 +71,7 @@ table {
         ?>
         
     </table>
+    </center>
   </div>
 </body>
 <?php
