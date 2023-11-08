@@ -1,7 +1,5 @@
 <?php
     require_once "../ADMIN DASH/connect/connect.php";
-
-
 ?>
 
 <!DOCTYPE html>
