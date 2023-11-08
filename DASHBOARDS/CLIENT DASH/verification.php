@@ -80,6 +80,7 @@
                         ?>
                         <script type="text/javascript">
                             alert('Wrong code');
+                            location.href="verification.php?email=<?php echo$email?> ";
                         </script>
                         <?php
                     }
