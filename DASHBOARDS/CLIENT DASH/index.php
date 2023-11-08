@@ -89,7 +89,7 @@
                 <input type="password" name="password" required>
                 <label>Password</label>
             </div>
-            <div class="pass">Forgot Password?</div>
+            <a href="forgot.php"><div class="pass">Forgot Password?</div></a>
                 <input type="submit" value="Login">
             <div class="signup">
                 Don't have an account? <a href="signup.php">Sign up</a> here!

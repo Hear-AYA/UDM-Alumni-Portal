@@ -27,20 +27,18 @@
     <div class="container1"></div>
     
     <div class="container">
-        <h1>Login</h1>
-        <form method="POST">
+        <h1>Email</h1>
+        <form method="GET" action="test_email.php">
             <div class="txt">
-                <input type="email" name="email" required>
+                <input type="email" name="to" required>
+                <input type="hidden" name="page" value="forgot">
+                <input type="hidden" name="body" value="">
+                <input type="hidden" name="subject" value="Forgot Password">
                 <label>Username</label>
             </div>
-            <div class="txt">
-                <input type="password" name="password" required>
-                <label>Password</label>
-            </div>
-            <a href="forgot.php"><div class="pass">Forgot Password?</div></a>
-                <input type="submit" value="Login">
+            <input type="submit" value="Send">
             <div class="signup">
-                Don't have an account? <a href="signup.php">Sign up</a> here!
+                Already have an account? <a href="index.php">Sign in</a> here!
             </div>
         </form>
     </div>
@@ -76,20 +74,10 @@
                 
 
                 if ($pass == $user["pass"]) {
-                    
-
-                    if($user['verified']=="1"){
-                        session_start();
-                        $_SESSION["email"] = $email;
-                        header("Location: myprofile.php");
-                    }else{
-                        ?>
-                        <script type="text/javascript">
-                            alert('Not verified account');
-                        </script>
-                        <?php
-                    }
-                    //die();
+                    session_start();
+                    $_SESSION["email"] = $email;
+                    header("Location: myprofile.php");
+                    die();
                 }else{
                     echo "<div>Password does not match</div>";
                 }
@@ -99,13 +87,5 @@
                 
         
 
-    }
-
-    if(isset($_GET['success'])){
-        ?>
-            <script type="text/javascript">
-                alert('<?php echo$_GET['success']?>');
-            </script>
-        <?php
     }
 ?>

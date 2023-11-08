@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2023 at 11:33 AM
+-- Generation Time: Nov 08, 2023 at 05:27 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -124,16 +124,18 @@ CREATE TABLE `regsinfo` (
   `skill_expertise` varchar(250) NOT NULL,
   `dateofbirth` varchar(250) NOT NULL,
   `degree` varchar(250) NOT NULL,
-  `address` varchar(500) NOT NULL
+  `address` varchar(500) NOT NULL,
+  `verified` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `regsinfo`
 --
 
-INSERT INTO `regsinfo` (`id`, `fullName`, `img_loc`, `email`, `pass`, `cpass`, `pnum`, `course`, `gender`, `award`, `year_graduated`, `current_job`, `job_experience`, `skill_expertise`, `dateofbirth`, `degree`, `address`) VALUES
-(12, 'Alexander Avendano', '1696529040_355721356_274600031814272_1868331215881352822_n.png', 'a.avendano008@gmail.com', 'admin', 'admin', 9558456111, 'BSIT', 'Female', 'test', 'test', 'test', 'test', 'test', '2023-10-04', 'test', ''),
-(13, 'Test1 test1', '', 'test@gmail.com', 'test', 'test', 9558456111, 'test', 'Male', 'test', 'test', 'test', '', '', '', '', 'test');
+INSERT INTO `regsinfo` (`id`, `fullName`, `img_loc`, `email`, `pass`, `cpass`, `pnum`, `course`, `gender`, `award`, `year_graduated`, `current_job`, `job_experience`, `skill_expertise`, `dateofbirth`, `degree`, `address`, `verified`) VALUES
+(12, 'Alexander Avendano', '1696529040_355721356_274600031814272_1868331215881352822_n.png', 'a.avendano008@gmail.com', 'admin', 'admin', 9558456111, 'BSIT', 'Female', 'test', 'test', 'test', 'test', 'test', '2023-10-04', 'test', '', '1'),
+(13, 'Test1 test1', '', 'test@gmail.com', 'test', 'test', 9558456111, 'test', 'Male', 'test', 'test', 'test', '', '', '', '', 'test', ''),
+(14, 'test', '', 'a.avendano008@gmail.com', 'admin', 'admin', 9123456789, 'IT', 'Male', '', '', '', '', '', '', '', '', '1');
 
 --
 -- Indexes for dumped tables
@@ -189,7 +191,7 @@ ALTER TABLE `professional`
 -- AUTO_INCREMENT for table `regsinfo`
 --
 ALTER TABLE `regsinfo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
