@@ -14,14 +14,14 @@ body{
   background-size: cover;
 }
 
-img{
+/*img{
     position: relative;
     top: -258px;
     left: 110px;
     height: 72px;
     width: 79px;
 
-}
+}*/
 .wrapper{
   position: relative;
   max-width: 430px;

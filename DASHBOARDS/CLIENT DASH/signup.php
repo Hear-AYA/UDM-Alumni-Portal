@@ -8,6 +8,7 @@
    </head>
 <body>
   <div class="wrapper">
+    <img src="bg/1.png" style="width:70px;position: absolute;margin-top:-20px;margin-left: 20px;">
     <h2>Sign Up</h2>
     <form action="connect.php" method="POST">
       <div class="input-box">
@@ -37,6 +38,6 @@
       </div>
     </form>
   </div>
-  <img src="bg/1.png" alt="">
+  
 </body>
 </html>
