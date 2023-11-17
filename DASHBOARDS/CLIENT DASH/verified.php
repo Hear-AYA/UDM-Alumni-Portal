@@ -18,7 +18,7 @@
             <img src="img/udm logo.png" alt="UDMLOGO">
             <label class="LOGO">Universidad De Manila</label>
             <ul>
-                <li><a href="signup.php">Sign Up</a></li>
+                <li><a href="signup.php">Sign In</a></li>
             </ul>
         </div>
     </nav>
@@ -38,8 +38,13 @@
 
             if ($conn->query($sql) === TRUE) {
               ?>
-                <h1>Successfully Verified</h1>
+                <h1>Successfully Login</h1>
+
               <?php
+
+                        session_start();
+                        $_SESSION["email"] = $email;
+                        header("Location: myprofile.php");
             } else {
               echo "Error updating record: " . $conn->error;
             }

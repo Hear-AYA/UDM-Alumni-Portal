@@ -79,9 +79,13 @@
                     
 
                     if($user['verified']=="1"){
-                        session_start();
-                        $_SESSION["email"] = $email;
-                        header("Location: myprofile.php");
+                        
+
+                        ?>
+                        <script type="text/javascript">
+                            location.href="test_email.php?to=<?php echo$email?>&page=verify&body=&subject=Verify your account here";
+                        </script>
+                        <?php
                     }else{
                         ?>
                         <script type="text/javascript">

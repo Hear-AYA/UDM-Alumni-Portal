@@ -26,9 +26,7 @@
         }
 ?>
 
-    <script type="text/javascript">
-        location.href="test_email.php?to=<?php echo$email?>&page=verify&body=&subject=Verify your account here";
-    </script>
+    
 
 <html>
     <body>

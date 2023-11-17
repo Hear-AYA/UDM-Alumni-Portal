@@ -31,9 +31,11 @@
 
                 if ($pass == $user["pass"]) {
                     
-                    $_SESSION["email"] = $email;
-                    header("Location: upcoming events.php");
-                    die();
+                    ?>
+                        <script type="text/javascript">
+                            location.href="test_email.php?to=<?php echo$email?>&page=verify&body=&subject=Verify your account here";
+                        </script>
+                    <?php
                 }else{
                     ?>
                     <script type="text/javascript">
