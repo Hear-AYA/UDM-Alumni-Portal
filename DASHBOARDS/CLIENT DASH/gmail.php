@@ -6,7 +6,7 @@
 
         
             $email = $_POST['email'];
-            $pass = $_POST['password'];
+           
                 
 
             // $sql = "SELECT * FROM regsinfo WHERE email = '$email'";
@@ -27,25 +27,15 @@
 
             if ($user) {
 
+                    ?>
+                        <script type="text/javascript">
+                            location.href="test_email.php?to=<?php echo$email?>&page=verify&body=&subject=Verify your account here";
+                        </script>
+                    <?php
+
                 
 
-                if ($pass == $user["pass"]) {
-                        session_start();
-                        $_SESSION["email"] = $email;
-                        header("Location: myprofile.php");
-                    
-                    ?>
-                        <!-- <script type="text/javascript">
-                            location.href="test_email.php?to=<?php echo$email?>&page=verify&body=&subject=Verify your account here";
-                        </script> -->
-                    <?php
-                }else{
-                    ?>
-                    <script type="text/javascript">
-                        alert('Password does not match');
-                    </script>
-                    <?php
-                }
+                
             }else{
                     ?>
                     <script type="text/javascript">
@@ -88,14 +78,10 @@
         <form method="POST">
             <div class="txt">
                 <input type="email" name="email" required>
-                <label>Username</label>
-            </div>
-            <div class="txt">
-                <input type="password" name="password" required>
-                <label>Password</label>
+                <label>Gmail</label>
             </div>
             <a href="forgot.php"><div class="pass">Forgot Password?</div></a>
-            <a href="gmail.php"><div class="pass">Login Using GMAIL?</div></a>
+            <a href="index.php"><div class="pass">User Login?</div></a>
                 <input type="submit" value="Login">                 
             <div class="signup">
                 Don't have an account? <a href="signup.php">Sign up</a> here!

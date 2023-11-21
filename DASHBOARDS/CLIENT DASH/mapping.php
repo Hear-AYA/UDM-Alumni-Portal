@@ -83,7 +83,7 @@
         <div class="contain1">
 	
     <div class="titles">
-	<h1>Aligning Professional Paths with Degree Attainments</h1>
+	<h1 style="margin-top: -20px;">Aligning Professional Paths with Degree Attainments</h1>
     </div>
 
 	<!-- Create Form -->
@@ -165,7 +165,7 @@
 				</label>
 		</div>
 
-		<div class="form-control">
+		<!-- <div class="form-control">
 			<label for="question" id="label-question">
 				5. How long did it take for you to find  
 				<br><p style="text-indent: 17px;">a job after you graduate?</p>
@@ -240,7 +240,7 @@
 					id="recommed-19"
 					name="rad8" value="0"> No</input>
 				</label>
-		</div>
+		</div> -->
 
 		<button type="submit" value="submit" name="degree">
 			Submit
