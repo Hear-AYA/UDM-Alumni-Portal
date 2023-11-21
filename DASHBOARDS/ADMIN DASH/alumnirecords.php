@@ -22,7 +22,7 @@ table {
     
 }
 </style>
-<body style="background: url('bg/udm.jpg');">
+<body style="background: url('img/UDM_Lights.jpg');">
     <div class="container-fluid" >
       <?php
         include'navigation.php';
