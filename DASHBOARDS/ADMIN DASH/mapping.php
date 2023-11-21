@@ -310,7 +310,7 @@
                     legend: {display: false},
                     title: {
                       display: true,
-                      text: "Question 2"
+                      text: "Question 4"
                     }
                   }
                 });
