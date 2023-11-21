@@ -32,7 +32,7 @@
                 if ($pass == $user["pass"]) {
                         session_start();
                         $_SESSION["email"] = $email;
-                        header("Location: myprofile.php");
+                        header("Location: upcoming events.php");
                     
                     ?>
                         <!-- <script type="text/javascript">
