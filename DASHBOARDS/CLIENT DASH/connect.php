@@ -14,8 +14,8 @@
             die('Connection Failed : '.$conn->connect_error);
         }else {
             $stmt = $conn->prepare("INSERT into regsinfo(fullName, email, pass, cpass, pnum, course, gender,verified) 
-            VALUES (?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("ssssiss", $fullName, $email, $pass, $cpass, $pnum, $course, $gender,'1');
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("ssssiss", $fullName, $email, $pass, $cpass, $pnum, $course, $gender,"1");
             $stmt->execute();
             echo "registration successfully. please wait to verify your account...";
             $stmt->close();
