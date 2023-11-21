@@ -131,7 +131,7 @@
                     legend: {display: false},
                     title: {
                       display: true,
-                      text: "Question 1"
+                      text: "Question 1/Is your current job directly related to your college major?"
                     }
                   }
                 });
@@ -190,7 +190,7 @@
                     legend: {display: false},
                     title: {
                       display: true,
-                      text: "Question 2"
+                      text: "Question 2/Did the University prepare you for your career path?"
                     }
                   }
                 });
@@ -251,7 +251,7 @@
                     legend: {display: false},
                     title: {
                       display: true,
-                      text: "Question 3"
+                      text: "Question 3/Did you switch industries after graduation?"
                     }
                   }
                 });
@@ -310,7 +310,7 @@
                     legend: {display: false},
                     title: {
                       display: true,
-                      text: "Question 4"
+                      text: "Question 4/Have you worked in a position related to your internship experience?"
                     }
                   }
                 });
