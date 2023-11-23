@@ -90,8 +90,10 @@
 	<form id="form" method="POST" >
 		<div class="form-control">
 			<label for="question" id="label-question">
-				1. 	Is your current job directly related
-					<br><p style="text-indent: 17px;">to your college major?</p>
+				1. 	Is your current job 
+				<p style="text-indent: 17px;">currently related</p>
+					<p style="text-indent: 17px;">to your college </p>
+					<p style="text-indent: 17px;">major?</p>
 			</label>
 			<input type="hidden" name="alumni_id" value="<?php echo$id?> ">
 			<label for="recommed-4">
@@ -109,8 +111,9 @@
 
 		<div class="form-control">
 			<label for="question" id="label-question">
-				2. Did the University prepare you for 
-				<br><p style="text-indent: 17px;">your career path?</p>
+				2. Did the University 
+				<p style="text-indent: 17px;">prepare you for</p> 
+				<p style="text-indent: 17px;">your career path?</p>
 			</label>
 
 			<label for="recommed-6">
@@ -128,8 +131,9 @@
 
 		<div class="form-control">
 			<label for="question" id="label-question">
-				3. Did you switch industries after 
-				<br><p style="text-indent: 17px;">graduation?</p>
+				3. Did you switch 
+				<p style="text-indent: 17px;">industries after</p> 
+				<p style="text-indent: 17px;">graduation?</p>
 			</label>
 
 			<label for="recommed-8">
@@ -147,8 +151,9 @@
 
 		<div class="form-control">
 			<label for="question" id="label-question">
-				4. Have you worked in a position 
-				<br><p style="text-indent: 17px;"> related to your internship</p>
+				4. Have you worked in a 
+				<p style="text-indent: 17px;">position related</p>
+				<p style="text-indent: 17px;">to your internship</p>
 				<p style="text-indent: 17px;">experience?</p>
 			</label>
 
