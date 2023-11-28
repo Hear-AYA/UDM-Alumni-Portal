@@ -22,8 +22,8 @@
             // $conn->close();
 
 
-            $sql = "INSERT INTO regsinfo (fullName, email, pass, cpass, pnum, course, gender,verified)
-            VALUES ('$fullName', '$email', '$pass', '$cpass', '$pnum', '$course', '$gender','1')";
+            $sql = "INSERT INTO regsinfo (fullName, email, pass, cpass, pnum, course, gender,verified,type)
+            VALUES ('$fullName', '$email', '$pass', '$cpass', '$pnum', '$course', '$gender','1','student')";
 
             if ($conn->query($sql) === TRUE) {
               echo "registration successfully. please wait to verify your account...";
