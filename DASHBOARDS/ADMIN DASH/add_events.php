@@ -163,7 +163,7 @@
           </table>
             
           <?php
-            include'connect/connect.php';
+            //include'connect/connect.php';
 
             if(isset($_POST['save_event'])){
               extract($_POST);
