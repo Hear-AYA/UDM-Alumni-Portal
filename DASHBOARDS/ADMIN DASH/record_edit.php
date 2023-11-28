@@ -34,31 +34,8 @@
 
             <div class="job">
               <table cellpadding = "10">
-<tr>
-  <td>
-    <?php
-      if($img_loc!==""){
-        ?>
-          <img src="../CLIENT DASH/uploads/<?php echo$img_loc?>" width="100px" height="100px" style="border-radius:100px;">
-        <?php
-      }else{
-        ?>
-          <img src="../../dummy.png" width="100px" height="100px">
-        <?php
-      }
-    ?>
 
-  </td>
-</tr>
-<tr>
-  <td>Upload Picture: </td>
-  <td>
-    <form  enctype="multipart/form-data"  method="POST">
-       <input type="file" name="img_loc" id="img_loc" />
-       <button type="submit" name='update_pic' >Update pic</button>
-    </form>
-  </td>
-</tr>
+
 <form method="POST" >
   <input type="hidden" name="id" value="<?php echo$id?>">
 <!--------------------- First Name ------------------------------------------>

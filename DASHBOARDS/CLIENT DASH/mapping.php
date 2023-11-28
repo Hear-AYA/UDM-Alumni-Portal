@@ -261,6 +261,8 @@
 
 	          if($k=="degree"){
 	            $data .= "";
+	          }else if($k=="rad3"){
+	            $data .= ", $k='0' ";
 	          }else{
 	            $data .= ", $k='$v' ";
 	          }

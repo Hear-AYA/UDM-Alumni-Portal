@@ -33,6 +33,12 @@
               </a>
             </li>
             <li>
+              <a href="change_password.php">
+                <i class="fas fa-cog"></i>
+                <div>Change Password</div>
+              </a>
+            </li>
+            <li>
               <a href="logout.php">
                 <i class="fas fa-arrow-left"></i>
                 <div>Logout</div>

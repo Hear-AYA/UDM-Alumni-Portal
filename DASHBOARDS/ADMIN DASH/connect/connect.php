@@ -36,4 +36,18 @@
 
       $today_str = strtotime(date("Y-m-d H:i:s"));
 
+
+
+      function user_type($type){
+
+
+        if($type=="admin"){
+          return "ADMIN DASH/upcoming events.php";
+        }else{
+          return "CLIENT DASH/myprofile.php";
+        }
+
+      }
+      
+
 ?>

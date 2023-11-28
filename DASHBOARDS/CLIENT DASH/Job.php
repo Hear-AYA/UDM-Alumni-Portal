@@ -435,9 +435,9 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
         details.classList.add("details");
   
         let detailsBtn = document.createElement("a");
-        detailsBtn.href = job.link;
-        detailsBtn.textContent = "More Details";
-        detailsBtn.classList.add("details-btn");
+        detailsBtn.href = job.requirements;
+        detailsBtn.textContent = "Link Here";
+        // detailsBtn.classList.add("details-btn");
   
         let openPositions = document.createElement("span");
         openPositions.classList.add("open-positions");

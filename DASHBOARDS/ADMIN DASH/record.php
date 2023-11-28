@@ -35,22 +35,7 @@
 
             <div class="job">
               <table cellpadding = "10">
-<tr>
-  <td>
-    <?php
-      if($img_loc!==""){
-        ?>
-          <img src="../CLIENT DASH/uploads/<?php echo$img_loc?>" width="100px" height="100px" style="border-radius:100px;">
-        <?php
-      }else{
-        ?>
-          <img src="../../dummy.png" width="100px" height="100px">
-        <?php
-      }
-    ?>
 
-  </td>
-</tr>
 <form method="POST" >
   <input type="hidden" name="id" value="<?php echo$id?>">
 <!--------------------- First Name ------------------------------------------>

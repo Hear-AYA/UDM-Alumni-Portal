@@ -178,7 +178,7 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
   );
   
   const requirementsInput = createFormInput(
-    "Requirements",
+    "HyperLinks",
     "text",
     job.requirements || "",
     "requirements"
@@ -398,15 +398,20 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
         let title = document.createElement("h3");
         title.innerHTML = job.title;
         title.classList.add("job-title");
+
+        let detailsBtn = document.createElement("a");
+        detailsBtn.href = job.requirements;
+        detailsBtn.textContent = "Link Here";
+        // detailsBtn.classList.add("details-btn");
   
         let details = document.createElement("div");
         details.innerHTML = job.details;
         details.classList.add("details");
   
-        let detailsBtn = document.createElement("a");
-        detailsBtn.href = job.link;
-        detailsBtn.textContent = "More Details";
-        detailsBtn.classList.add("details-btn");
+        // let detailsBtn = document.createElement("a");
+        // detailsBtn.href = job.link;
+        // detailsBtn.textContent = "More Details";
+        // detailsBtn.classList.add("details-btn");
   
         let openPositions = document.createElement("span");
         openPositions.classList.add("open-positions");
@@ -419,6 +424,7 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
   
         jobCard.appendChild(buttonContainer); // Add the button container to the job card
         jobCard.appendChild(title);
+        
         jobCard.appendChild(details);
         jobCard.appendChild(detailsBtn);
         jobCard.appendChild(openPositions);

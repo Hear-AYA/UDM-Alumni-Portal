@@ -1,0 +1,62 @@
+h2 {
+    font-family: Sans-serif; 
+    font-size: 24px;     
+    font-style: normal; 
+    font-weight: bold; 
+    color: blue;
+    text-align: center; 
+    text-decoration: underline
+}
+   
+table {
+    font-family: verdana; 
+    color:white; 
+    font-size: 16px; 
+    font-style: normal;
+    font-weight: bold;
+    background: #fff;  
+    border-collapse: collapse; 
+    border: 4px;
+    position: relative;
+    left: 100px;
+}
+
+table.inner {
+    border: 10px
+}
+
+input[type=text], input[type=email], input[type=number] {
+    width: 50%;
+    padding: 6px 12px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+input[type=submit], input[type=button] {
+    width: 15%;
+    padding: 8px 12px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.contain1 {
+    max-width: 50%;
+    max-height: 95%;
+    margin: -94px auto;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    right: -130px;
+    bottom: -160px;
+}
+
+.bg img {
+    background-size: cover;
+    background-size: 100%;
+}
+
+table td {
+    color: black;
+}

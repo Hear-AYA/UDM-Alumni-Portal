@@ -39,6 +39,6 @@
 
 <html>
     <body>
-        <h3><a href="login.php">Login</a></h3>
+        <h3><a href="../">Login</a></h3>
     </body>
 </html>

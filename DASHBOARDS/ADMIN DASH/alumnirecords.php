@@ -7,13 +7,13 @@
 <style type="text/css">
   table, th, td {
     border: 1px solid black;
-    padding: 20px;
+/*    padding: 20px;*/
 }
 
 table {
     background-color: antiquewhite;
     font-weight: bold;
-    padding: 25px;
+/*    padding: 25px;*/
     position: absolute;
     left: 295px;
     top: 130px;
@@ -30,9 +30,10 @@ table {
       <center>
     <table style="background: white !important; padding: 20px !!important; text-align: center;">
         <tr>
-            <th><center>Avatar</center></th>
             <th><center>Name</center></th>
-            <th><center>Course Graduated</center></th>
+            <th><center>Degree</center></th>
+            <th><center>Year Graduated</center></th>
+            <td><center>Current Job</center></td>
             <th><center>Action</center></th>
         </tr>
 
@@ -46,23 +47,13 @@ table {
                extract($row);
         ?>
           <tr>
-              <td>
-                  <?php
-                    if($img_loc!==""){
-                      ?>
-                        <img src="../CLIENT DASH/uploads/<?php echo$img_loc?>" width="100px" height="100px" style="border-radius:100px;">
-                      <?php
-                    }else{
-                      ?>
-                        <img src="../../dummy.png" width="100px" height="100px">
-                      <?php
-                    }
-                  ?>
-              </td>
+              
               <td><?php echo$fullName?></td>
               <td><?php echo$degree?></td>
+              <td><?php echo$year_graduated?></td>
+              <td><?php echo$current_job?></td>
               <td>
-                <a class="view" href="record.php?email=<?php echo$email?>">View</a> | <a class="view" href="record_edit.php?email=<?php echo$email?>">Edit</a>
+                <a class="view" href="record.php?email=<?php echo$email?>">View</a> 
               </td>
           </tr>
         <?php   

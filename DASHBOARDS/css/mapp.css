@@ -1,0 +1,91 @@
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */  
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 550px;
+    		margin: 161px auto;
+    		padding: 38px 52px;
+    		box-shadow: 2px 5px 10px rgba(230, 212, 142, 0.5);
+            position: relative;
+            right: 25%;
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 20px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #05c46b;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: inline-block;
+			width: 50%;
+			margin-top: 40px;
+			margin-bottom: 20px;
+			position: absolute;
+			right: 95px;
+		}
+
+        .contain1 {
+            max-width: 65%;
+            max-height: 250%;
+            margin: -94px auto;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            right: -130px;
+            bottom: -88px;
+        }
+
+        .titles h1 {
+            position: relative;
+            left: 300px;
+            top: 15px;
+            text-align: center;
+			background-color: white;
+			background-size: 55px;
+			left: 208px;
+			top: 10%;
+        }
+
+body {
+	background-image: url("img/UDM_Lights.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: 100%;
+}

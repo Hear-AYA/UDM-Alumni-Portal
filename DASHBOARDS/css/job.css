@@ -1,0 +1,304 @@
+Job.css
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'University', sans-serif;
+}
+
+.topbar {
+    position: fixed;
+    background: #135c10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 10fr 0.4fr 1fr;
+    align-items: center;
+    z-index: 1;
+    top: 0px;
+}
+
+.topbar p {
+    color: #fff;
+    position: relative;
+    left: 162px;
+    font-size: large;
+    font-family: 'University', sans-serif; 
+}
+
+.logo {
+    color: black;
+}
+
+img.avatar {
+    width: 60px;
+    height: 55px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 95px;
+bottom: 2px;
+
+}
+
+img.avtr {
+    
+  width: 250px;
+  background-position: left;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 6px;
+  bottom: 0px
+}
+
+img.avt{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+   
+}
+.user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* sidebar will start here*/
+.sidebar {
+    position: fixed;
+    top: 60px;
+    width: 260px;
+    height: calc(100% - 60px);
+    background: #91cf8b;
+    overflow-x: hidden ;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    width: 100%;
+    list-style: none;
+}
+
+.sidebar ul li:hover {
+    background: #135c10;
+}
+
+
+.sidebar h1{
+    position: relative;
+    left: 35px;
+    color: #050505;
+    top: 15px
+}
+
+.sidebar ul li:hover a{
+    color: #fff;
+    ;
+}
+
+.sidebar ul li a {
+    width: 100%;
+    text-decoration: none;
+    color: #050505;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    min-width: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+/* Job css starts  here */
+
+.jobs-list-container {
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    right: 15%;
+    top: 10%;
+  }
+  
+  .jobs-list-container h2 {
+    font-size: 30px;
+    border-left: 4px solid #ffffff;
+    padding-left: 20px;
+    color: white;
+    position: relative;
+    right: -15%;
+    margin-bottom: 10px;
+  }
+  
+  .jobs-list-container .jobs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .jobs-list-container .jobs img {
+    width: 49px;
+  }
+  
+  .jobs-list-container .job {
+    box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+    padding: 24px;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    right: -41%;
+    transition: all 400ms ease;
+    background: white;
+  }
+  
+  .jobs-list-container .job:hover {
+    transform: scale(1.03);
+  }
+  
+  .jobs-list-container .open-positions {
+    position: absolute;
+    top: 40px;  
+    right: 24px;
+    color:  red;
+  }
+  
+  .jobs-list-container .job-title {
+    font-size: 20px;
+    padding: 10px 0;
+    margin-top: 25px;
+    color:  #135c10;
+  }
+  
+  .jobs-list-container .details {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.8;
+    flex: 1;
+  }
+  
+  .jobs-list-container .details-btn {
+    text-decoration: none;
+    border: 1px solid #135c10;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    transition: all 400ms ease;
+  }
+  
+  .jobs-list-container .details-btn:hover {
+    background: #135c10;
+    color: #fff;
+  }
+  
+  .jobs-list-container .job-search {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: white;
+    position: relative;
+    right: -14%;
+  }
+
+  .job-button {
+    background-color: #05c46b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 260px; /* Adjust the margin as needed */
+    position: absolute;
+  }
+  /* CSS to make the delete icon smaller */
+  .delete-icon {
+    width: 40px; /* Adjust the width to your desired size */
+    height: 40px; /* Adjust the height to your desired size */
+  }
+  .edit-icon {
+    width: 40px; /* Adjust the width to your desired size */
+    height: 40px; /* Adjust the height to your desired size */
+  }
+    
+  @media (max-width: 940px) {
+    .jobs-list-container .jobs {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .jobs-list-container .jobs {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  
+
+@media (max-width:1115px) {
+    .sidebar {
+        width: 60px;
+    }
+    .main {
+        left: 60px;
+        width: calc(100% - 60px);
+    }
+}
+
+@media (max-width:880px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:500px) {
+    .topbar {
+        grid-template-columns: 1fr 5fr 0.4fr 1fr;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .logo h2 {
+        font-size: 20px;
+    }
+    .search {
+        width: 80px;        
+    }
+    .search input {
+        padding: 0 20px;
+    }
+    .fa-bell {
+        margin-right: 5px;
+    }
+    .user {
+        width: 40px;
+        height: 40px;
+    }
+ }
