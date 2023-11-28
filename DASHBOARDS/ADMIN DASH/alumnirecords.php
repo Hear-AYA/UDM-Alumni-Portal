@@ -21,8 +21,12 @@ table {
     width: 75%;
     
 }
+
+
 </style>
-<body style="background: url('img/UDM_Lights.jpg');">
+<body style="background: url('img/UDM_Lights.jpg') ;">
+
+    <img src="img/UDM_Lights.jpg" alt="avt" class="avt">
     <div class="container-fluid" >
       <?php
         include'navigation.php';
