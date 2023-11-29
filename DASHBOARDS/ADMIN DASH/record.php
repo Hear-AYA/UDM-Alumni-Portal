@@ -140,7 +140,7 @@ Female
 <tr>
 <td colspan="2" align="center">
 <!-- <input type="button" value="Edit"> -->
-    <a href="record_edit.php?email=<?php echo$email?>" > Edit</a>
+    <!-- <a href="record_edit.php?email=<?php echo$email?>" > Edit</a> -->
 </td>
 </tr>
 <!--------- End ------------>
