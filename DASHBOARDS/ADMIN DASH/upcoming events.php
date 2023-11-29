@@ -23,7 +23,7 @@
               <div class="searchForm type2">
                 <form action="" class="searchForm"><!-- Add The Appropriate Action for Your Site's Search Form/Page -->
                   <label class="sr-only" for="searchNewsEvents">Search News and Events</label>
-                   <input id="searchNewsEvents" name="data" id="data" placeholder="What are you looking for?" type="search" onkeyup="search_data(this.value);search_datas(this.value);"> <input type="submit" value="Search">
+                   <input id="searchNewsEvents" name="data" placeholder="What are you looking for?" type="search" onkeyup="search_data(this.value);search_datas(this.value);"> <input type="submit" value="Search">
                 </form>
               </div>
             </div>

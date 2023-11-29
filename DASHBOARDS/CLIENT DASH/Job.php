@@ -20,6 +20,12 @@
 
     <title>UDM Alumni Portal</title>
 </head>
+
+<style type="text/css">
+  .job{
+    width: 250px;
+  }
+</style>
 <body>
     <div class="container">
       <div class="topbar">
@@ -430,9 +436,9 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
         title.innerHTML = job.title;
         title.classList.add("job-title");
   
-        let details = document.createElement("div");
-        details.innerHTML = job.details;
-        details.classList.add("details");
+        // let details = document.createElement("div");
+        // details.innerHTML = job.details;
+        // details.classList.add("details");
   
         let detailsBtn = document.createElement("a");
         detailsBtn.href = job.requirements;
@@ -450,7 +456,7 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
   
         jobCard.appendChild(buttonContainer); // Add the button container to the job card
         jobCard.appendChild(title);
-        jobCard.appendChild(details);
+        // jobCard.appendChild(details);
         jobCard.appendChild(detailsBtn);
         jobCard.appendChild(openPositions);
   

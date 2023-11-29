@@ -13,6 +13,11 @@
 
     }
 ?>
+<style type="text/css">
+  .job{
+    width: 250px;
+  }
+</style>
 <body style="background: url('img/UDM_Lights.jpg');">
   <img src="img/UDM_Lights.jpg" alt="avt" class="avt">
     <div class="container-fluid" >
@@ -201,7 +206,7 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
   
   // Qualifications section
   const qualificationsFieldset = document.createElement("fieldset");
-  qualificationsFieldset.innerHTML = "<legend>Qualifications</legend>";
+  qualificationsFieldset.innerHTML = "<br>";
   
   const educationInput = createFormInput(
     "Education",
@@ -270,18 +275,18 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
   editForm.appendChild(positionId);
   editForm.appendChild(positionTitleInput);
   editForm.appendChild(requirementsInput);
-  editForm.appendChild(salaryInput);
-  editForm.appendChild(monthlySalaryInput);
+  // editForm.appendChild(salaryInput);
+  // editForm.appendChild(monthlySalaryInput);
   
-  qualificationsFieldset.appendChild(educationInput);
-  qualificationsFieldset.appendChild(trainingInput);
-  qualificationsFieldset.appendChild(experienceInput);
-  qualificationsFieldset.appendChild(eligibilityInput);
-  qualificationsFieldset.appendChild(researchOutputInput);
-  qualificationsFieldset.appendChild(communityExtensionServiceInput);
-  qualificationsFieldset.appendChild(competencyInput);
-  qualificationsFieldset.appendChild(placeOfAssignmentInput);
-  qualificationsFieldset.appendChild(placeOfPositions);
+  // qualificationsFieldset.appendChild(educationInput);
+  // qualificationsFieldset.appendChild(trainingInput);
+  // qualificationsFieldset.appendChild(experienceInput);
+  // qualificationsFieldset.appendChild(eligibilityInput);
+  // qualificationsFieldset.appendChild(researchOutputInput);
+  // qualificationsFieldset.appendChild(communityExtensionServiceInput);
+  // qualificationsFieldset.appendChild(competencyInput);
+  // qualificationsFieldset.appendChild(placeOfAssignmentInput);
+  // qualificationsFieldset.appendChild(placeOfPositions);
   editForm.appendChild(qualificationsFieldset);
   
   // Add a submit button for the form
@@ -405,9 +410,9 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
         detailsBtn.textContent = "Link Here";
         // detailsBtn.classList.add("details-btn");
   
-        let details = document.createElement("div");
-        details.innerHTML = job.details;
-        details.classList.add("details");
+        // let details = document.createElement("div");
+        // details.innerHTML = job.details;
+        // details.classList.add("details");
   
         // let detailsBtn = document.createElement("a");
         // detailsBtn.href = job.link;
@@ -426,7 +431,7 @@ function createFormInput(labelText, inputType, inputValue,inputName) {
         jobCard.appendChild(buttonContainer); // Add the button container to the job card
         jobCard.appendChild(title);
         
-        jobCard.appendChild(details);
+        // jobCard.appendChild(details);
         jobCard.appendChild(detailsBtn);
         jobCard.appendChild(openPositions);
   
