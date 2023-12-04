@@ -19,7 +19,7 @@
   }
 </style>
 <body style="background: url('img/UDM_Lights.jpg');">
-  <img src="img/UDM_Lights.jpg" alt="avt" class="avt">
+  <img src="img/aaa.jpg" alt="avt" class="avt">
     <div class="container-fluid" >
       <?php
         include'navigation.php';

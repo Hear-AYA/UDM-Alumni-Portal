@@ -10,7 +10,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: left;
-  background-image: url(img/UDM_Lights.jpg);
+  background-color: #fff;
   background-size: cover;
 }
 

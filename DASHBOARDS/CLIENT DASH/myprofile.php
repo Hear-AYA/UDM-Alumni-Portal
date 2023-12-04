@@ -40,7 +40,7 @@
           <img src="img/udm logo.png" alt="Avatar" class="avatar">          
         </div>
         <div class="bg">
-          <img src="img/UDM_Lights.jpg" alt="avt" class="avt">
+          <img src="img/aaa.jpg" alt="avt" class="avt">
         </div>
         
       <div class="sidebar">

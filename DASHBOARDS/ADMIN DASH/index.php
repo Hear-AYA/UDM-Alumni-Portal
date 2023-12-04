@@ -74,7 +74,7 @@
             </ul>
         </div>
     </nav>
-    <img src="img/UDM_Lights.jpg" alt="avt" class="avt">  
+    <img src="img/aaa.jpg" alt="avt" class="avt">  
 
     <div class="container1"></div>
     

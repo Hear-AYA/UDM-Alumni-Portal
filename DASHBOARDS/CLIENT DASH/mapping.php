@@ -34,7 +34,7 @@
           <img src="img/udm logo.png" alt="Avatar" class="avatar">          
         </div>
         <div class="bg">
-          <img src="img/UDM_Lights.jpg" alt="avt" class="avt">
+          <img src="img/aaa.jpg" alt="avt" class="avt">
         </div>
       <div class="sidebar">
         <h1>Dashboard</h1>
@@ -128,8 +128,7 @@
 
 		<div class="form-control">
 			<label for="question" id="label-question">
-				3. Did you switch industries after
-				<br><p style="text-indent: 17px;">graduation?</p>
+				3. Did you switch industries after graduation?
 			</label>
 
 			<label for="recommed-8">
@@ -262,7 +261,7 @@
 	          if($k=="degree"){
 	            $data .= "";
 	          }else if($k=="rad3"){
-	            $data .= ", $k='0' ";
+	            $data .= ", $k='$v' ";
 	          }else{
 	            $data .= ", $k='$v' ";
 	          }
@@ -284,7 +283,7 @@
 				if (mysqli_query($conn, $sql)) {
 				  ?>
 		       <script type="text/javascript">
-		         alert('Success');
+		         alert('The response you provided has been saved');
 		         location.href='mapping.php';
 		       </script>
 		       <?php

@@ -76,11 +76,10 @@
             <img src="img/udm logo.png" alt="UDMLOGO">
             <label class="LOGO">Universidad De Manila</label>
             <ul>
-                <li><a href="signup.php">Sign Up</a></li>
             </ul>
         </div>
     </nav>
-    <img src="img/UDM_Lights.jpg" alt="avt" class="avt">  
+    <img src="img/aaa.jpg" alt="avt" class="avt">  
 
     <div class="container1" style="height: 500px;"></div>
     

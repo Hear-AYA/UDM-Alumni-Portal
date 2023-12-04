@@ -116,7 +116,7 @@
                 <script>
                 var xValues1 = ["Yes", "No"];
                 var yValues1 = [<?php echo$data_score?>, <?php echo$data_score1?>, 44, 24, 15];
-                var barColors = ["blue", "blue"];
+                var barColors = ["#135c10", "#91cf8b"];
 
                 new Chart("myChart1", {
                   type: "bar",
@@ -131,7 +131,7 @@
                     legend: {display: false},
                     title: {
                       display: true,
-                      text: "Question 1/Is your current job directly related to your college major?"
+                      text: "Question 1. Is your current job directly related to your degree?"
                     }
                   }
                 });
@@ -175,7 +175,7 @@
                 <script>
                 var xValues2 = ["Yes", "No"];
                 var yValues2 = [<?php echo$data_score?>, <?php echo$data_score1?>, 44, 24, 15];
-                var barColors = ["blue", "blue"];
+                var barColors = ["#135c10", "#91cf8b"];
 
                 new Chart("myChart2", {
                   type: "bar",
@@ -190,7 +190,7 @@
                     legend: {display: false},
                     title: {
                       display: true,
-                      text: "Question 2/Did the University prepare you for your career path?"
+                      text: "Question 2. Did the University prepare you for your career path?"
                     }
                   }
                 });
@@ -236,7 +236,7 @@
                 <script>
                 var xValues3 = ["Yes", "No"];
                 var yValues3 = [<?php echo$data_score?>, <?php echo$data_score1?>, 44, 24, 15];
-                var barColors = ["blue", "blue"];
+                var barColors = ["#135c10", "#91cf8b"];
 
                 new Chart("myChart3", {
                   type: "bar",
@@ -251,7 +251,7 @@
                     legend: {display: false},
                     title: {
                       display: true,
-                      text: "Question 3/Did you switch industries after graduation?"
+                      text: "Question 3. Did you switch industries after graduation?"
                     }
                   }
                 });
@@ -295,7 +295,7 @@
                 <script>
                 var xValues4 = ["Yes", "No"];
                 var yValues4 = [<?php echo$data_score?>, <?php echo$data_score1?>, 44, 24, 15];
-                var barColors = ["blue", "blue"];
+                var barColors = ["#135c10", "#91cf8b"];
 
                 new Chart("myChart4", {
                   type: "bar",
@@ -310,7 +310,7 @@
                     legend: {display: false},
                     title: {
                       display: true,
-                      text: "Question 4/Have you worked in a position related to your internship experience?"
+                      text: "Question 4. Have you worked in a position related to your internship experience?"
                     }
                   }
                 });
