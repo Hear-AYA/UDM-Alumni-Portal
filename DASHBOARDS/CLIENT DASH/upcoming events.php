@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>UDM Alumni Portal</title>
 </head>
-<body style="background-color: #eddc86;">
+<body>
     
   <div class="container1">
       <div class="topbar">

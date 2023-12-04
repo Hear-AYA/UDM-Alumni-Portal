@@ -1,18 +1,18 @@
 /* Events css starts  here */
 
 .container2 {
-    padding-right: 20px;
-    padding-top: 15px;
+    padding-right: 45px;
+    padding-top: 2px;
+    padding-bottom: 555px;
     padding-left: 292px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 60px;
+    margin-top: 59px;
     margin-bottom: 10px;
     height: auto;
     font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;
-    background-color: #eddc86;
+    line-height: 1.42857;
+    background-color: #dbf9db;
  
 }
 .searchForm {
