@@ -18,7 +18,7 @@
     width: 250px;
   }
 </style>
-<body style="background: url('img/UDM_Lights.jpg');">
+<body style="background: url('img/aaa.jpg');">
   <img src="img/aaa.jpg" alt="avt" class="avt">
     <div class="container-fluid" >
       <?php
@@ -89,24 +89,6 @@ jobsHeading.innerHTML = `${jobs.length} Job`;
 } else {
 jobsHeading.innerHTML = `${jobs.length} Jobs`;
 }
-
-// function createFormInput(labelText, inputType, inputValue) {
-// // Create a label element
-// const label = document.createElement("label");
-// label.textContent = labelText;
-
-// // Create an input element
-// const input = document.createElement("input");
-// input.type = inputType;
-// input.value = inputValue;
-
-// // Append the label and input elements to a container (e.g., a div)
-// const container = document.createElement("div");
-// container.appendChild(label);
-// container.appendChild(input);
-
-// return container;
-// }
 
 
 

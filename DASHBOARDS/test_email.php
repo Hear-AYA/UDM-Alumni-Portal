@@ -28,7 +28,7 @@
                 "sender" => $sender,
                 "subject" => $subject,
                 "html_body" => $html_body,
-                "text_body" => "Your Verication number is ".$num_str,
+                "text_body" => "Your OTP is ".$num_str,
 
             )));
 

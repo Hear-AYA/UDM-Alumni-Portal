@@ -18,16 +18,15 @@
             <img src="img/udm logo.png" alt="UDMLOGO">
             <label class="LOGO">Universidad De Manila</label>
             <ul>
-                <li><a href="signup.php">Sign Up</a></li>
             </ul>
         </div>
     </nav>
-    <img src="img/UDM_Lights.jpg" alt="avt" class="avt">  
+    <img src="img/aaa.jpg" alt="avt" class="avt">  
 
     <div class="container1"></div>
     
     <div class="container">
-        <h1>Email</h1>
+        <h1>Enter your email</h1>
         <form method="GET" action="test_email.php">
             <div class="txt">
                 <input type="email" name="to" required>

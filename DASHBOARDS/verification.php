@@ -22,12 +22,12 @@
             </ul>
         </div>
     </nav>
-    <img src="img/UDM_Lights.jpg" alt="avt" class="avt">  
+    <img src="img/aaa.jpg" alt="avt" class="avt">  
 
     <div class="container1"></div>
     
     <div class="container">
-        <h1>Verification</h1>
+        <h1>Enter your OTP</h1>
         <form method="POST">
             <div class="txt">
                 <input type="hidden" name="email" value="<?php echo$_GET['email']?>">
