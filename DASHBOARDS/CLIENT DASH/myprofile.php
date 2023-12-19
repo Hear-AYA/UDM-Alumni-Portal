@@ -91,7 +91,7 @@
   </td>
 </tr>
 <tr>
-<td>Fullname: </td>
+<td>Full name: </td>
 <td><input type="text" name="fullName" maxlength="50" placeholder="" value="<?php echo$fullName?>" required/>
 </td>
 <tr>
@@ -131,7 +131,7 @@ Female
 <tr>
   <td>Date of Birth : </td>
   <td>
-    <input type="date" name="dateofbirth" class="date"  value="<?php echo$dateofbirth?>" required>
+    <input style="width:133px;" type="date" name="dateofbirth" class="date"  value="<?php echo$dateofbirth?>" required>
   </td>
 </tr>
 </tr>
