@@ -20,10 +20,7 @@
   td{
      padding: 2px 15px;
     font-weight: bold;
-    font-size: 15px;
-  }
-  input{
-    width: ;
+    font-size: 35px;
   }
 </style>
 <body style="background: url('bg/udm.jpg');">

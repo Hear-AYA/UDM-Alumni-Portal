@@ -17,7 +17,7 @@ include 'header.php';
 
     <div class="container1" style="margin-top:-15px;">
         <div class="topbar">
-            <p>Welcome Alumni!</p>
+            <p>Welcome Admin!</p>
             <img src="img/udm logo.png" alt="Avatar" class="avatar">
         </div>
 

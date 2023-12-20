@@ -30,7 +30,7 @@
     
   <div class="container1">
       <div class="topbar">
-        <p>Welcome Almuni!</p>
+        <p>Welcome Alumni!</p>
           <img src="img/udm logo.png" alt="Avatar" class="avatar">          
         </div>
        <div class="sidebar" style="font-size: 16px;">

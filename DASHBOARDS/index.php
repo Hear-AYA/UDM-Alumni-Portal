@@ -74,7 +74,7 @@
     <nav>
         <div class="logo">
             <img src="img/udm logo.png" alt="UDMLOGO">
-            <label class="LOGO">Universidad De Manila</label>
+            <label class="LOGO">UDM: Alumni Portal</label>
             <ul>
             </ul>
         </div>
