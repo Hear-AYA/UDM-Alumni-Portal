@@ -18,8 +18,8 @@
     width: 250px;
   }
 </style>
-<body style="background: url('img/aaa.jpg');">
-  <img src="img/aaa.jpg" alt="avt" class="avt">
+<body>
+  <img src="img/BG.png" alt="avt" class="avt">
     <div class="container-fluid" >
       <?php
         include'navigation.php';

@@ -24,9 +24,9 @@ table {
 
 
 </style>
-<body style="background: url('img/UDM_Lights.jpg') ;">
+<body>
 
-    <img src="img/aaa.jpg" alt="avt" class="avt">
+    <img src="img/BG.png" alt="avt" class="avt">
     <div class="container-fluid" >
       <?php
         include'navigation.php';

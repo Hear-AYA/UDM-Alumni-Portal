@@ -22,7 +22,7 @@
             </ul>
         </div>
     </nav>
-    <img src="img/aaa.jpg" alt="avt" class="avt">  
+    <img src="img/BG.png" alt="avt" class="avt">  
 
     <div class="container1"></div>
     
