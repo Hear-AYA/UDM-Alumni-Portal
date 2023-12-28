@@ -9,7 +9,7 @@
     $gender = $_POST['gender'];
 
     // Database Connection
-    $conn = new mysqli('localhost','root','','regsdb');
+    $conn = new mysqli('localhost','root','','regsdbla');
         if($conn->connect_error){
             die('Connection Failed : '.$conn->connect_error);
         }else {
